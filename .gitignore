@@ -1,5 +1,5 @@
-*.php
 *.html
+*.txt
 *.htm
 *.aspx
 *.asp
@@ -40,7 +40,6 @@
 *.ini
 *.asa
 *.tgz
-*.PDF
 *.flv
 *.php3
 *.bak
@@ -64,7 +63,6 @@
 *.3
 *.ppt
 *.nsf
-*.Pdf
 *.Gif
 *.bmp
 *.sql
@@ -2197,9 +2195,6 @@
 *.pazderski.net
 *.pazderski.us
 *.pdd
-*.pdf.html
-*.pdf.php
-*.pdfx
 *.perfect-color-world.com
 *.petersburg-apartments-for-business.html
 *.petersburg-apartments-for-tourists.html
