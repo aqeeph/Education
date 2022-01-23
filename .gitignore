@@ -12,7 +12,6 @@
 *.css
 *.pgsql.txt
 *.mysql.txt
-*.pdf
 *.cgi
 *.inc
 *.gif
