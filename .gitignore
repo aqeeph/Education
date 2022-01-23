@@ -1,10 +1,6 @@
-*.gdoc
-*.vsd
-*.xps
-*.gsheet
-*.icf
 *.php
 *.html
+*.txt
 *.htm
 *.aspx
 *.asp
@@ -12,6 +8,7 @@
 *.css
 *.pgsql.txt
 *.mysql.txt
+*.pdf
 *.cgi
 *.inc
 *.gif
@@ -2204,7 +2201,6 @@
 *.pazderski.us
 *.pdd
 *.pdf.html
-*.pdf.pdf
 *.pdf.php
 *.pdfx
 *.perfect-color-world.com
