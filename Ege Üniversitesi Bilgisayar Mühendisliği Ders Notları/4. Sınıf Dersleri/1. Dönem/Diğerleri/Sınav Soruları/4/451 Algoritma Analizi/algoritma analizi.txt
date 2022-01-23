@@ -1,0 +1,47 @@
+1- 
+for i=1 to n-1
+For j=i+1 to n
+For k=j down to 1
+R++
+Basic operation kaç kere çalýþýr. 
+
+2- 
+algo Dc(n)
+if n < 2 
+Return 
+Else 
+Dc(n/3)
+For i=1 to n
+counter ++ 
+denklemini yazýp backward subtition ile çözün. 
+
+3- 
+birinci algo problemi 7 tane n/2 parçaya bölüyor. Lineer zamanda birleþtiriyor. 
+Ýkinci algo problemi 2 tane (n-1) parçaya bölüyor, Q(1) zamanda birleþtiriyor.
+Üçüncü algo problemi 9 tane n/3 parçaya bölüyor. Devamýný unuttum. 
+Bunlarýn time efficiencylerini karþýlaþtýrýn. Kullanacak olsanýz hangisini neden seçersiniz açýklayýn. 
+
+4-
+a =45 b = 13 c=12 d=16 e=9 f=5
+Bu alfabe için huffman tree çizin. Her karakter için kaç bit kullanýlýr bulun. 1000000 karakterlik bir string olsaydý kaç bit olurdu. ?
+
+5-
+j={1,2,3,4,5,6,7}
+D={4,2,4,1,3,4,6}
+P={20,60,30,40,70,50,10}
+J = iþ serisi
+D = bu iþler için verilen deadline. Yani 1. Ýþi bitirmeniz için 4 gününüz varken 2. Ýþ için 2 gününüz var. 
+P = her bir iþten deadlinenýnda bitirdiðiniz takdirde elde edeceðiniz kazanç. 
+Bütün iþlerin yapým süresi 1 gün. Yani hepsi 1 günlük çalýþmayla bitiyorlar. Bunlarý öyle bir sýraya koyun ki maksimum kazanç elde edilsin. Ýster deadline a göre ister profit e göre çalýþan bir greedy algoritma yazýn ve bu set üzerinde çalýþtýrýn. 
+Not=deðrlerin sýrasýný unuttum, karýþýk biraz.
+
+6- 
+1	 2	3	4
+1 0	15	25	35
+2 -	0	12	16
+3 -	-	0	5
+4 -	-	-	0
+Burada bir nehirde yapýlacak gezinin maliyetleri için tablo var. 1den 2ye 15 lira, 1den 3e 25 lira, 2 den 4 e16 lira gibi. Nehirin akýþ yönünün tersine gidilemediði için sadece ileri gidiyor. Amaç 1 den baþlayýp rotayý takiben 4. Duraða gitmek. Hangi yol izlenirse en ucuza gidilir. (1 den 2 ye gidilir. 2 de inilip tekrar binilip direk 4 e geçilir. 31 lira olur) 
+Bunun için dinamik algoritma yazýnýz. 
+Time efficiencysi nedir?
+Algoritmayý yazmak için bir recurrence vermiþ, bu doðru mudur neden kullanmalýyýz açýklayýn.

@@ -1,0 +1,6 @@
+Ajax küçük deðiþiklikler yapýldýðýnda sadece gerekli olan bilgiler deðiþtirilerek sayfanýn yeniden yüklenmesini önler.
+Ajax uzantýlarý
+ScriptManager:ajax kontrollerinin kullanýlabilmesini saðlar.
+ScriptManagerProxy:kontrollerin gerektiði yerlerde kullanýlmasýný saðlar.her sayfaya yükleme iþlemi yapýlmaz.
+UpdatePanel:özel bir alan oluþturularak sadece o alanýn güncellenmesi saðlanýr.
+Timer: Timer ile veri belirli zaman aralýklarýnda sürekli bir þekilde tetiklenebilmektedir.

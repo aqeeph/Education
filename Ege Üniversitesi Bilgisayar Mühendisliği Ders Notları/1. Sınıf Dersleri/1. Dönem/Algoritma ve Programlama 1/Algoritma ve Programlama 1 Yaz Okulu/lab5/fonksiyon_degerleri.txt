@@ -1,0 +1,37 @@
+Fonksiyon Degerleri:
+
+f(x,y,z)=(-xkare+2*y*zkare-3*x*y*z)/(xkare-ykare) fonksiyonu veriliyor. x, y, z; [-3,3] araliginda tamsayilar olduguna göre, f(x,y,z) fonksiyonunun olasi tüm degerlerini ve bu degerlerin ortalamasini bulan bir program yaziniz.
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y,z,xKare,yKare,pay,payda,gecersizlerin_sayisi=0;
+    float f_x_y_z,toplam=0;
+    for (x=-3; x<=3; x++){
+        xKare = x*x;
+        for (y=-3; y<=3; y++){
+            yKare = y*y;
+            payda = xKare-yKare;
+            for (z=-3; z<=3; z++){
+                if(payda!=0){
+                    pay = (xKare*-1)+2*y*z*z-3*x*y*z;
+                    f_x_y_z = (float)pay/payda;
+                    printf("x=%d y=%d z=%d icin f(x,y,z)=%f\n",x,y,z,f_x_y_z);
+                    toplam = toplam+f_x_y_z;
+                }
+                else {
+                    printf("x=%d y=%d z=%d icin fonksiyonun degeri yok\n",x,y,z);
+                    gecersizlerin_sayisi++;
+                }//end of if
+            }//end of for z
+        }//end of for y
+    }//end of for x
+
+    printf("Degerlerin ortalamasi: %f", toplam/(7*7*7-gecersizlerin_sayisi));
+
+    return 0;
+}

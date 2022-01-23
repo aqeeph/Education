@@ -1,0 +1,35 @@
+Matrix Sizes: A1 3 x 15 ; A2 15 x 4 ; A3 4 x 13 ; A4 13 x 17 ; A5 17 x 5 ; A6 5 x 8 ; A7 8 x 18 ; A8 18 x 6 ; A9 6 x 19 ; A10 19 x 11 
+
+In-order multiplication
+Number of multiplication: 3099
+Run time(msec) : 0
+
+
+Multiplication with Dynamic Programming
+
+Table for Dynamic Programming
+
+ 0 180 336 999 1254 1374 1806 2130 2472 3099
+ 0 0 780 1904 1524 1864 3040 2752 3988 4344
+ 0 0 0 884 1224 1384 1960 2392 2848 3684
+ 0 0 0 0 1105 1625 2995 2599 4014 4508
+ 0 0 0 0 0 680 2250 1614 3289 3623
+ 0 0 0 0 0 0 720 1104 1674 2688
+ 0 0 0 0 0 0 0 864 1776 2646
+ 0 0 0 0 0 0 0 0 2052 2442
+ 0 0 0 0 0 0 0 0 0 1254
+ 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 2 3 4 5 6 7 8
+ 0 0 1 1 1 1 1 1 1 1
+ 0 0 0 2 3 4 5 6 7 8
+ 0 0 0 0 3 4 4 4 4 4
+ 0 0 0 0 0 4 4 4 4 4
+ 0 0 0 0 0 0 5 5 7 7
+ 0 0 0 0 0 0 0 6 7 7
+ 0 0 0 0 0 0 0 0 7 7
+ 0 0 0 0 0 0 0 0 0 8
+ 0 0 0 0 0 0 0 0 0 0
+
+Matrices with paranthesis: (((((((((p[0]p[1])p[2])p[3])p[4])p[5])p[6])p[7])p[8])p[9])
+Number of multiplication: 3099
+Run time(msec) : 0

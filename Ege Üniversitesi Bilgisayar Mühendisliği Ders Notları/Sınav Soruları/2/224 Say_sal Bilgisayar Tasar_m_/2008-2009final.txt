@@ -1,0 +1,11 @@
+- sram dram farklarý
+
+-single cycle ýn dezavantajlarý..multi cycle da bu ekliklikler nasýl giderilmiþtir açýkla.
+
+-multi cycle daki control unit i çiz açýkla ne iþe yarar..
+
+-asm chart vermiþ..state diagram çiz.. oneflipflop ve sequencedecoder e göre çözümle
+
+-4 tane iþlem vermiþ..  f=x+y+Cin  þeklinde kitapta örnek var..A ve B inputlarý var ve elde ye göre fonksiyon deðer üretiyo..bunun devresini çiz.. 
+ 
+ 

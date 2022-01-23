@@ -1,0 +1,10 @@
+
+1)IBM370 kod var.Pass1 ve Pass2 sonuclarý
+2)Adressing Modes
+3)SIC/XE kodu var.One pass assemblerdan gecerse object kod olsumu,sembol tablosu,dosyaya yazýmý
+4)One pass assemblerda literaller nasýl tutulur
+
+buna ek olarak trace soracam demiþti
+trace:Proðramýn çalýþmasý sonucu verdiði çýktýlar. Bahsi geçen çýktýlar sonuc olabileceði gibi ara adýmlardaki(mesela registerlardaki) deðerleride içerebilir
+
+Hocanýn son derste yaptýðý son örnek benzeri biþey kýsacasý..

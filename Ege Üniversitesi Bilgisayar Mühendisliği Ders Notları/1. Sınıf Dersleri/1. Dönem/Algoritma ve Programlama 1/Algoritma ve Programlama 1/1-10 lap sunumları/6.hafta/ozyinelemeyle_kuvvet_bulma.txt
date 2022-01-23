@@ -1,0 +1,31 @@
+Ozyinelemeyle Kuvvet Bulma (Deitel&Deitel s:191 soru:5.37):
+
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int kuvvet(int,int);
+
+int main()
+{
+    int taban,us;
+
+    printf("Tabani giriniz:");
+    scanf("%d",&taban);
+
+    printf("Ussu giriniz(1 ya da daha buyuk):");
+    scanf("%d",&us);
+
+    printf("%d uzeri %d=%d",taban,us,kuvvet(taban,us));
+
+    return 0;
+}
+
+int kuvvet(int taban, int us)
+{
+    if (us==1) //temel durum
+        return taban;
+    else //özyineleme adimi
+        return (taban*kuvvet(taban,us-1));
+}

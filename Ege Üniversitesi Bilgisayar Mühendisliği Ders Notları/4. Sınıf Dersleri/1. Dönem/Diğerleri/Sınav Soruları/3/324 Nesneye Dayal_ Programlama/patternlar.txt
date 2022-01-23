@@ -1,0 +1,126 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package patternlar;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author cetin
+ */
+interface musteri {
+    void krediver(int miktar);
+}
+
+class Amusteri implements musteri {
+   
+    public void krediver(int miktar) {
+    
+    System.out.println( "A grubu musteriye kredi ver" );
+    
+    System.out.println("miktar "+miktar);
+    }
+}
+
+
+class Bmusteri implements musteri {
+
+    public void krediver(int miktar) {
+    
+    System.out.println( "B grubu musteriye kredi ver" );
+    System.out.println("miktar "+miktar/2);
+    }
+}
+
+class Cmusteri implements musteri {
+
+    public void krediver(int miktar) {
+    
+    System.out.println( "C grubu musteriye kredi ver" );
+    System.out.println("miktar "+miktar/4);
+    }
+}
+
+class musteriolustur {
+    
+    public musteri MUSTERI;
+    public musteri musteritipi( int no ) {	//factory pattern
+        
+        switch (no/1000) {
+            case 1:
+                return new Amusteri();
+            case 2:
+                return new Bmusteri();
+        }
+        
+        
+        return new Cmusteri();
+    }
+    
+    void musteritipiata(musteri MUSTERI,int miktar){ //strategy pattern
+         MUSTERI.krediver(miktar);
+    }
+}
+
+class Test {
+    
+    public static void main(String[] args) {
+        bilgiler musteribilgisi=new bilgiler();
+        
+        System.out.println("Musteri numarasini giriniz(4 haneli)");
+        Scanner sc=new Scanner(System.in);
+        musteribilgisi.setMusteriNo(sc.nextInt());
+        
+        System.out.println("Ýstediginiz mikrari giriniz");
+        Scanner sc2=new Scanner(System.in);
+        musteribilgisi.setMiktar(sc2.nextInt());
+        
+        musteri mstr = new musteriolustur().musteritipi(musteribilgisi.getMusteriNo() );
+        musteriolustur mm=new musteriolustur();
+        mm.musteritipiata(mstr,musteribilgisi.getMiktar());
+        
+        System.out.println("Musteri numarasini giriniz(4 haneli)");
+        Scanner sc3=new Scanner(System.in);
+        musteribilgisi.setMusteriNo(sc3.nextInt());
+        
+        System.out.println("Ýstediginiz miktari giriniz");
+        Scanner sc4=new Scanner(System.in);
+        musteribilgisi.setMiktar(sc4.nextInt());
+        
+        musteri mstr2=new musteriolustur().musteritipi(musteribilgisi.getMusteriNo());
+        musteriolustur mm2=new musteriolustur();
+        mm2.musteritipiata(mstr2,musteribilgisi.getMiktar());
+    }
+}
+
+
+
+
+
+class bilgiler{
+    int musteriNo;
+    int miktar;
+
+    public int getMiktar() {
+        return miktar;
+    }
+
+    public int getMusteriNo() {
+        return musteriNo;
+    }
+
+    public void setMiktar(int miktar) {
+        this.miktar = miktar;
+    }
+
+    public void setMusteriNo(int musteriNo) {
+        this.musteriNo = musteriNo;
+    }
+
+}
+
+ class Patternlar {
+
+}

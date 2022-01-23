@@ -1,0 +1,32 @@
+Haftalik Ücret Hesaplama:
+
+Bir isçinin birim saat ücretini ve haftada kaç saat çalistigini alan ve isçiye ödenecek haftalik ücreti hesaplayarak ekrana yazdiran bir program yaziniz. Isçinin haftalik çalisma saati 40 saatin üzerindeyse, fazla mesai ücreti olarak her saat için birim saat ücretinin 1,5 kati ödenir.
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int haftalik_calisma_suresi;
+    float birim_saat_ucreti;
+    float ek_ucret=0;//degiskenlere tanimlanirken baslangic degeri verilebilir...
+    float ucret;
+
+    printf("Birim saat ucretini giriniz:");
+    scanf("%f",&birim_saat_ucreti);
+
+    printf("Haftalik calisma suresini giriniz:");
+    scanf("%d",&haftalik_calisma_suresi);
+
+    if (haftalik_calisma_suresi>40)
+        ek_ucret=(haftalik_calisma_suresi-40)*birim_saat_ucreti*0.5;
+    //yukaridaki kosul saglanmiyorsa, ek_ucret degiskeninin degeri zaten sifirlanmisti!
+
+    ucret=haftalik_calisma_suresi*birim_saat_ucreti+ek_ucret;
+
+    printf("Odenecek ucret:%f",ucret);
+
+    return 0;
+}

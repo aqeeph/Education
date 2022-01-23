@@ -1,0 +1,6 @@
+Ara Sýnav Notu = 50 puan (Ara Sýnav) + 50 puan (Proje ve Ödevler)
+
+Final Sýnavý Notu = 50 puan (Final Sýnavý) + 50 puan (Proje ve Ödevler)
+
+Baþarý Notu = %40 Ara Sýnav Notu + %60 Final Sýnavý Notu
+

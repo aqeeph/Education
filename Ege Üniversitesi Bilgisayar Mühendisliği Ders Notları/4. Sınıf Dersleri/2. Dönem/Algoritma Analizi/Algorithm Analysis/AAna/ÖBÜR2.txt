@@ -1,0 +1,17 @@
+    // return offset of first match; N if no match
+    public int search(char[] text) {
+        int M = pattern.length;
+        int N = text.length;
+        int skip;
+        for (int i = 0; i <= N - M; i += skip) {
+            skip = 0;
+            for (int j = M-1; j >= 0; j--) { //pattern ýn uzunluðu kadar dönüyo
+                if (pattern[j] != text[i+j]) { //i. konumdan baþlayarak patterný karþýlaþtýrýyo
+                    skip = Math.max(1, j - right[text[i+j]]);// d yi belirliyo
+                    break;
+                }
+            }
+            if (skip == 0) return i;    // found
+        }
+        return N;                       // not found
+    }

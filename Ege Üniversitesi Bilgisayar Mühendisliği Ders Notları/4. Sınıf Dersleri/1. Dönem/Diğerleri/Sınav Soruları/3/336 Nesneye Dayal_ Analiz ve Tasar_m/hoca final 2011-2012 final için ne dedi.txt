@@ -1,0 +1,27 @@
+Arkadaþlar bugün nesneyi kaçýranlar için hocanýn sýnav hakkýnda söyledikleri:
+1. Vizede GRASP'larý yazýp býrakanlardan (controller bile olsa) puan kýrmýþlar, açýklama bekliyorlar.
+2. SD'leri komple birleþtirmeye çalýþýp yapamayanlar olmuþ galiba, ayrý ayrý yapýn dedi, ordan da doðru bile olsa kýrmýþlar (ben öyle anladým)
+
+Gelelim finale.
+
+Yine hepsinden 1er tane olcakmýþ.
+Ödevden gelen soru menüyle ilgili olacak dedi.
+Monopoly ve POS için polymorphism örneklerine bakýn, oradan gelir dedi. Hatta monopoly için özel olarak farklý kareler olan örnek varmýþ onu söyledi.
+
+Ch 20 Mapping design to code sorarým dedi. Sýnýf ve metodlarý sorarmýþ ama içini, kodunu sormayacakmýþ.
+Ch 19 Visibility konusundan sorabilirim sormayabilirirm de dedi. Parameter visibility vs konularý. Ch 20'yi bi þýkta sorup bunu da ekleyebilirim dedi.
+
+Ch 26 applying GoF design okuyun dedi.
+Ch 25-35'e de bakýn dedi. 35'te galiba paternler var (kitaba bakamadým derste aldýðým notlardan yazýyorum þu an), onlar falan önemli sanýrým.
+
+Bi de Monopoly vs için domain modeli verebilirim belki dedi.
+
+Özet isteyenlere:
+Ch 19-20-25-26-35 önemli.
+Herþeyi niye yaptýðýnýzý açýklamak önemli.
+
+Son olarak ödev notu %30u olacak finalin ama doðru anladýysam notlar düþük olursa direk ekleme þeklinde de yapabilirler. Ama ben bunu yanlýþ anlamýþ olabilirim, çok kargaþa vardý sýnýfta.
+
+Ekleme-düzeltme yapmak isteyen arkadaþlar da lütfen yapsýnlar:)
+
+Þimdiden herkese baþarýlar. Ben yine çalýþma kaðýtlarý hazýrlamaya çalýþacaðým

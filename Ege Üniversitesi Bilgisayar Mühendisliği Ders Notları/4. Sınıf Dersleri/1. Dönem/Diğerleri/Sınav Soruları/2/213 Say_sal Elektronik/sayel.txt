@@ -1,0 +1,41 @@
+Analog devrelerle arayuz kesin soru gelir...
+1) Analogdan digitale cevirme
+2) Digitalden analoga cevirme
+ 
+şekil 6.1  cıkmaz
+6.1 sayısal analog cevrim -> output olarak kullanılabilir.
+ 
+253-> yüzler basamağı birler basamağına göre daha anlamlı cünkü yüzler basamağı değer olarak daha büyük
+LSB-> least significant bit (2 bitlik düzende en az anlamlı birler basamağı)
+MSB-> Most significan bt(2 bitlik düzende 3 basamaklı sayı için 2^3  için 3. basamak en anlamlı)
+ 
+şekil 6.3 -> basamakla goster derse! 15V max deger =2^n-1=2^4-1=15
+ 
+tamskala: kullanılan sayacta max deger elde edilecek deger!
+sekil 6.4 IF= (V-Vout)/RF ID=(V-Vout)/1K Ic=(V-Vc)/2K ... seklinde cözülüo
+ 
+sekil 6.5 kirchoff kullan  Msb için + ve - girişlerde farkın min olması gerekir bu ideal olandır..
+ 
+oturma zamanı: DAC nin calısma zamanı
+ 
+basamak buyuklugu yuksekse daha hassas
+VA' = VA -> low olduysa low high olduysa high da kalır..
+ 
+VA' > VA -> sinyal lowa dusuo tersiyse high
+Analogdan digitale cevirme daha uzun surec
+*soru: analogdan sayısal ceviriciye gelme olasılıgı daha yuksek test olursa ikisi de gelir...
+!mHz-> periyoda cevirince 1 msn
+ 
+4 bir için tamskala 1111
+8 bit için tamskala 11111111
+Flash ADC -> 2^N -1 tane karsılastrıcıya ihtiyac duyar
+ 
+sekil 6.8
+kac tane karsılastrmaya ihtiyac var!!
+bunun için binary (cıktı) degeri kac olmalıdır!!
+tabloda 2. satır 1 volt ile 2 volt arasında ise gecerli olanlar demk
+ 
+tablo verilirse hangileri dogru!!! 
+ 
+ 
+hepsi bu kdr bunları not aldım son ders... kolay gelsin:P

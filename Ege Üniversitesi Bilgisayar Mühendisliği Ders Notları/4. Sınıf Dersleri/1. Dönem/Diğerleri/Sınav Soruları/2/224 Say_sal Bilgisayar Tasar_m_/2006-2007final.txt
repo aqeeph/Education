@@ -1,0 +1,28 @@
+Buraya yazayým da seneye girerken bi daha bakarým
+1) ASM Chart var state'ler, durumlar, çýktýlar var. Daha önce sorduðu gibi flip flop yöntemi bi de baþka yöntemle(geçen senelerdekinden bakarýz) yapýn diyo
+2)32 tane bit varmýþ bunlar. 2 register'ýn 6 biti var, 13 tane operand var bi de 7 bit de baþka bi þey. Altýnda da 3 tane sorusu var adres kaç tane olur, operandýn alabilceði maks. min. deðerler kaçtýr falan.
+3)Verdiði aritmetik iþlemleri(A-1, A+B) gibi yapacak biþey...
+4)Single'la multinin kontrol mekanizmalarýnýn farklarýný üniteleri çizerek açýklayanýz.
+
+
+Biraz daha detay  
+
+1)one ff per state ve sequence…. Yöntemiyle
+SO state i: X1=0 ? S1 e gider
+                 X1=1 ve X2=0?S1 e gider
+                 X!=1 ve X’=1?S2 
+S1 state i :koþulsuz  SO a gider
+S2            :X1=1 iken S1
+                 X1= 0 iken yine S1 ama Z1=1 atayarak. Ýki tane Z1 Z2 çýktýlarý da var. 
+
+X1 iki ayrý yerde koþul yaratma için geçiyor. (s0-s2 arasý ve s2-s1 arasý)
+
+2)32 bitlik bir inst. Var bunun 7 biti opcode, ki tane 6  þar bitlik register alaný var ve 13 bitlik operand alaný
+  a)kaç tane iþlme tanýmlanabilir
+  b)kaç tane register adresleneiblir
+  c)opearand unsigned týr alabileceði min max deðeler
+
+3)Bu soru kitaptaki 10-3/10-4 ün bir benzeri veriler deðiþik sadece
+4)4 ‘te B-4 Kartalý nýn dediði  
+ 
+ 

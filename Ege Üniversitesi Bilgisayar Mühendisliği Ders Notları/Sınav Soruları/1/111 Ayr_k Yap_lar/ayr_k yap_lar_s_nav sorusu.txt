@@ -1,0 +1,9 @@
+1)quantifiers
+2)proposition
+3) Fermat's Little Theorem
+4) Isomorphic or rigorous
+5)cut vertices and cut edges
+6)euler circuit
+7)Hamilton circuit=>Dirac's theorem,Ore's theorem,od
+8)Shortest path->Dijkstra's algorithm
+9)Planer

@@ -1,0 +1,14 @@
+nesne finali gecen sene
+bir örnek program verip çyktysy.6puan tostring metodunla ilgili.
+
+polimorfizm ile ilgili bir soru,car vehicle door engine tarzynda birbiriyle ili?li synyflar verilmi?.
+a) uml
+ örnek verilen duurmlarda run time compile time hatasy varsa düzeltiniz.
+
+1den 100 e kadar sayacak biçimde senkronize çaly?an ve bununm için paralel çaly?an 4 tane thread kullanan programy yazynyz.
+
+Bir uçak ?irketi 3 çe?it mü?teri karty var elit classic normal bunlaryn mil ve ücret hesaplamalary var bunu strategy ile hesaplamasynyn yapylmasy ve factory ile nesne üretilmesi yapan bir pattern uygulamasy ayryca uml diyagramy da isteniyor.Test metodunu(main method) istemedi
+
+bir synyfa o synyfyn özelliklerini de?i?tirmeden,ve ek metot eklenmeden nasyl geni?letme yapylabilir.2tane pattern istyor en az.Klasikk soru uml kod istenmiyor.
+soruda 1)adapter 2) decorator ne için kullanyldyklarynyda istiyor.
+(veya composite duruma göre strategy de kullanylabilir.)

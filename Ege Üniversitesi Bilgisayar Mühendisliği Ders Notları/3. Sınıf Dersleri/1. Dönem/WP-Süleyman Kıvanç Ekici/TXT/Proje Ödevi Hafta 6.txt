@@ -1,0 +1,3 @@
+Proje
+ArrayList, Hashtable,Queue kullanan örnek uygulamalar yazýnýz.
+Generic bir class oluþturunuz ve kullanan bir uygulama yazýnýz.

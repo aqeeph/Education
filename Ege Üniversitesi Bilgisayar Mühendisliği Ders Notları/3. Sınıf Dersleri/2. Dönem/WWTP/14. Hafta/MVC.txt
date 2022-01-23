@@ -1,0 +1,10 @@
+ASP .NET Web Forms
+*Kod ve görünüm bir arada
+*Kolayca test edilemez
+*Olay güdümlü programlama
+*Karmaþýk URL
+ASP .NET MVC
+*Endiþeler ayrý
+*Test için dizayn edilmiþtir
+*HTML üzerinde tam kontrol
+*RESTful URL

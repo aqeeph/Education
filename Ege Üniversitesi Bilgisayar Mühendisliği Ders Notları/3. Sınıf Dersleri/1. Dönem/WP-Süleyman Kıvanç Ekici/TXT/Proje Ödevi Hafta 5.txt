@@ -1,0 +1,4 @@
+
+ICloneable ve IComparable arayüzlerini implemente eden sýnýflar yazýnýz.
+
+ 

@@ -1,0 +1,24 @@
+1)   state diagram verilmis
+a      flip flop per state ile cozumle
+b      sequence and decoder ile cozumle
+
+2) 512k x 16 kullanarak 2M x 32 elde ediniz  ( 8 register  her satýrda 2 tane 4 satýr )
+
+3)32 bitlik bir inst. Var bunun 111 farklý komut tanýmlanmýþ, 32 tane register var
+  a)kaç tane iþlem tanýmlanabilir 2^7=128>111   (7 bit)
+  b)register için kaç bir kullanýlýr 2^5=32  (5 bit)
+  c)opearand unsigned týr alabileceði min max deðeler 7+5=12  32-12 =20 bit operand için  1 bit sign için .19 bit kalýr .. min -2^19  max + 2^19  -1
+
+4) single cycle kontrol mekanizmasýnýý üniteleri çizerek açýklayanýz.
+
+5)  s1 s0         operation
+     -------         -------------
+     0  0           paralel load
+     0  1           complement
+     1  0           shift up
+     1  1           shift down    
+
+multiplexlar kullanarak tasarla.. sadece 1 bit göstermek yeterli 
+ 
+ 
+ 

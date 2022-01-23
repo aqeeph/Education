@@ -1,0 +1,56 @@
+Mevsim ve Gün Bulma:
+
+Numarasi verilen bir ayin (1-12) hangi mevsimde oldugunu ve kaç gün çektigini bulan bir program yaziniz. Ay numarasi 1-12 arasinda degilse kullaniciya hata mesaji verilmelidir. Ayrica ay numarasi olarak 2 girilmisse, kullanicidan yilin artik yil olup olmadigi sorularak gün sayisi belirlenmelidir.
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int ay_no;
+    char cevap;
+
+    printf("Ay numarasini giriniz(1-12):");
+    scanf("%d",&ay_no);
+
+    if (ay_no<1 || ay_no>12)
+        printf("Ay numarasi 1-12 arasinda olmaliydi");
+    else {
+        switch(ay_no) {
+            case 12:case 1:case 2:
+                printf("Bu ay Kis mevsimindedir\n");
+                break;
+            case 3:case 4:case 5:
+                printf ("Bu ay ilkbahar mevsimindedir\n");
+                break;
+            case 6:case 7:case 8:
+                printf("Bu ay Yaz mevsimindedir\n");
+                break;
+            case 9:case 10:case 11:
+                printf ("Bu ay Sonbahar mevsimindedir\n");
+                break;
+        }
+
+        switch(ay_no) {
+            case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+                printf("Bu ay 31 gundur\n");
+                break;
+            case 4:case 6:case 9:case 11:
+                printf("Bu ay 30 gundur\n");
+                break;
+            default:
+                printf("Bu yil artik yil mi?(E/H):");
+                fflush(stdin); //Standart giris(klavye) tamponunu temizler
+                cevap=getchar(); //scanf("%c",&cevap); ile ayni isi yapar
+                if (cevap=='H' || cevap=='h')
+                    printf("Artik yil olmadigi icin bu ay 28 gundur\n");
+                else //H ve h disinda girilen tum karakterleri evet olarak kabul eder
+                    printf("Artik yil oldugu icin bu ay 29 gundur\n");
+                break;
+        }
+    }
+
+    return 0;
+}

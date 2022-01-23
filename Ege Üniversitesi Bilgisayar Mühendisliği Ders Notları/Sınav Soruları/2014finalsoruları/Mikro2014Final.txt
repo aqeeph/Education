@@ -1,0 +1,10 @@
+Mikroiþlemciler 2014 final
+
+1- devre tasarýmý sorusu.geçen seneki finalin tasarým sorusunun birebir aynýsý.
+
+2- 'far procedure' sorusu.yine geçen seneki sorunun aynýsý sadece adres uzayýnda bir rakam farklý
+ 
+3- c dilinde yazýlmýþ bir kod vardý. metinde geçen 'al' ve 'ali' kelimelerinin sayýsýný bulan bir 
+programdý bunu assembly dilinde yazýn demiþti.
+
+4- kendi hazýrlattýðý boþluk doldurma sorularý 30 puandý bunlar

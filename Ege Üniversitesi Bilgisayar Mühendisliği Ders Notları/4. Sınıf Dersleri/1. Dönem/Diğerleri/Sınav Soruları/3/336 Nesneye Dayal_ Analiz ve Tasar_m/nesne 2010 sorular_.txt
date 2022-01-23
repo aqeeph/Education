@@ -1,0 +1,29 @@
+nesne 2010 vize sorularý
+
+1. “Referandum Tanýmlama” kullaným durumunu kitabýnýzda tanýmlanan
+“fully dressed” formatýna uygun olarak yazýnýz. Bu kullaným durumuna
+iliþkin Sistem Sýradüzen Diyagramýný (SSD) çiziniz. (30 puan)
+
+2. “Referandum Tanýmlama” kullaným durumu için alan modelini
+tanýmlayýnýz. (30 puan)
+
+3. Kitabýnýzdaki Monopol oyununu oyuncunun bir kareye gelince bu karede
+bulunan puaný aldýðý ve belirli bir puana eriþen ilk oyuncunun oyunu
+kazandýðý þekilde tasarlayýnýz. Dýþarýdan “Play Game” etkileþimi geliyor,
+bu etkileþimden sonra gerçekleþen nesne etkileþimlerini Etkileþim
+Diyagramý (Interaction Diagram) kullanarak çiziniz. Yararlandýðýnýz
+“GRASP” desenlerini nesnelerin üzerinde belirtiniz ve gerektiðinde
+açýklayýnýz. (40 puan)
+
+----------------------------------
+
+Son olarak: Asistanlarýn yaptýðý ödeve dair hangi belgeler var þimdi elimizde?
+Yine tecrübelerime dayanarak (kaldýðýmý da unutmayýn tabi, kel-merhem falan) en az birer SSD, SD (communication ya da sequence özel olarak istediðini hatýrlamýyorum), bi use case vs ödevde yaptýðýmýz adýmlarý monopoly/POS/Ödev için yazacaðýz. O yüzden en önemli þeyler þunlar
+1. Üç konu da nedir?
+2. Use Case'ler nelerdir? (þu use case'in diyagramýný çizin dediði olmuþtu hocanýn, eðer konuyu biliyorsanýz zaten çýkarýrsýnýz ama birebir bilmek daha faydalý)
+3. SSD'de ne çizilir, nasýl çizilir? SD nedir, nasýl çizilir? Fully dressed Use Case'de neler olur? 
+4. GRASP prensiplerinden gördüðümüz High Cohesion, Low Coupling, Info Expert, Controller ve Creator nedir? Elimizdeki örneklerde nerelerde iþe yaradýlar?
+
+Bu sorulara cevaplarýnýz ne kadar iyiyse, o kadar iyi alýrsýnýz. Tabi sýrf benim lafýma güvenmeyin, dediðim gibi, kel-merhem vs =P
+
+----------------------------------------

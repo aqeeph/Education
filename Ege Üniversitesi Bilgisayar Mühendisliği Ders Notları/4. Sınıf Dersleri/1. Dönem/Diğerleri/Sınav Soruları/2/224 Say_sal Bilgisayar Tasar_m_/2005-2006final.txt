@@ -1,0 +1,20 @@
+Hatýrladýgým kadarýyla
+(20)1.soru      4 tane fonk. vermis(A(x,y,z)=Em(3,4,5) gibi bunlarý hatýrlamýyorum) bu fonksiyonlarý veren bir rom yapýn dedi.
+(15)2.soru      asm chart verildi buna bakarak
+(01)a sýkký       kac tane durum vardýr
+(02)b sýkký       kac tane input vardýr
+(02)c sýkký       kac tane output vardýr
+(10)d sýkký      state diagramýný ciziniz
+(20)3. soru    state diagram verilmis 
+(10)a sýkký      flip flop per state ile cozumle
+(10)b sýkký      sequence and decoder ile cozumle
+(20)4. soru    single cycle ve multiplecycle devrelerinin ISA kodunu nasýl çalýþtýrdýgýný yazýnýz (gibi birþey)
+(25)5. soru    5 tane atama verilmis bunlarý yapan bir donaným ciziniz.
+X' K        :    R5<-- R1 + R2
+X K         :    R5<-- R1 - R2
+S1' S0'   :    R6<-- R5
+S1' S0    :    R6<-- shift right R5
+S1 S0'    :    R6<-- shift righr R5
+
+X' yazýlan X degil demek.
+ise yararsa ne mutlu

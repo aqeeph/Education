@@ -1,0 +1,1 @@
+SQLExpress veritabanýna baðlanan ve ekleme, güncelleme, silme ve listeleme iþlemlerini yapan bir uygulama geliþtirilecek.

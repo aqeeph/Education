@@ -1,0 +1,12 @@
+Proje ödevi yok.
+
+ 
+
+Ancak bayramdan sonra yapacaðýnýz projelere hazýrlýk olarak :
+
+* Ödevlerinizdeki eksikleri tamamlayýnýz.
+
+* Kullanýcý arayüzleri tasarlamak için Toolbox içinde bulunan komponentleri inceleyiniz örnek uygulamalar yapýnýz.
+
+* Kitapta bugüne kadar geldiðimiz kýsýmlardaki önemli örnekleri Visual Studio üzerinde uygulayýnýz.
+

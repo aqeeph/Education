@@ -1,0 +1,29 @@
+Vize 2006 - 2007
+
+ilk bÃ¶lÃ¼m 8 soruluk testti..  sorular lan-wan gibi konulardan ve topolojierden geldi.. seÃ§enek-sorular pek karışk deÄŸildi, şu tarz şeyler işte..
+
+1- bornova-karşıyaka-Ã¼Ã§yol arasında kurulacak aÄŸın tipi ne olsun a) wan b)man c)lan d) kurumsal alan aÄŸı
+
+2- wanlarda kablolama altyapısı kime ait olur? a) telekom b)valilik  vs.. vs...
+
+3- hangisi aÄŸ topoljisi? a) yerel alan aÄŸı topolojisi b)mesh topoloji c)internet topoloji vs...
+
+4- backbone'un tanımın verip nedir diyodu? cevap: backbone  
+
+5- kullanım amacına gÃ¶re sınıflandırılan bilgisauarlarta Ã¶rnek cevap: Ã¶zel kuruluşlara yÃ¶nelik..
+
+6- anahtarlı hatların dezavantajı a)hat meşguliyeti yok b) iletişim kalitesi iyi c)iletişim kalitesi kÃ¶tÃ¼ d) PC'yi switcher'a baÄŸlamak imkansız 
+
+2sini hatırlamıyom am ilk konulardan bu tarz şeyler...
+---------------------
+2.kısım 3 soru klasik
+
+1- stop&wait protokolÃ¼ ile ilgili.. bi taraf diÄŸerine 3 paket gÃ¶nderiyo, 2. paket bozuk.. sistem nasıl işer şekille gÃ¶ster
+
+2- bi sistemin işleyişini anlatıyo, bir taraf diÄŸerine adışk veri yolluyo, alıcının buffer'ı yok.. gÃ¶nderilen 6 paketten 3. paket bozuk, napılmalı bu hangi protokoldÃ¼r, şekille de Ã§izin falan filan.. continuous arq, go back-n'i sordu bize..
+
+3- soru gelmez dediÄŸim yer   sayısal verini analog olarak kodlanmasıyla ilgiliydi.. faz, frekans vs'ye gÃ¶re şekil istiyomuş, sayfa 44tekiler..
+
+-------------
+
+ilginÃ§tir ama osi 7 katmanlı mimari gelmedi.. neyse sorular bunlardır, geÃ§miş olsun..

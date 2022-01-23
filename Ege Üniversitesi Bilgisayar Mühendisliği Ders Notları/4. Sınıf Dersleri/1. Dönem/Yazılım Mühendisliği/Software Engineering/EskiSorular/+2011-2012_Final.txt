@@ -1,0 +1,16 @@
+-- ilk soru test kýsmýydý.8 tane test sorusu vardý 
+       hangisi V&V confidence e etki etmez ? zaten 3 tane, cevap project staff olacaktý.... Hepsi bunun kadar kolay
+       deðildi ama çok zor da deðildi dikkatli olan yapardý toplam 24p
+-- Test design dan 3 tane yazýnýz 6p
+-- user documentation da yazýlan belgelerden 3 tanesini yazýnýz toplam 6p
+-- Software Engineering Methods u tanýmlayýnýz... 1. ünitede olmasý lazým... 8p 
+-- Natural language problemleri nelerdir ve bunlara alternatif olan yöntemlerden 3 tane yazýnýz açýklayýnýz. 12p
+-- Transaction based process ve Data based process i açýklayýnýz 4p
+-- " A point-of-sale in a supermarket " gibi bir bilgi vererek bunun hangi application process type a girdiðini
+    açýklamasýyla yazýnýz. CEVAP: Transaction based process 8p
+-- Bir SSD vermiþ ve bu SSD üzerinden test case yazmamýzý istiyordu sayý vermeden.SSD para transferi ile
+    ilgiliydi. 10p
+-- Data Flow Diagram nedir açýklayýnýz 4p
+-- Bir mobil telefon faturalama sistemini DFD ile çiziniz (tarife tipine göre ve kullaným miktarýna göre diye bir 
+   detay da vardý ) 8p
+-- Dönem boyunca yaptýðýnýz projenin Context Diagram ýný çiziniz. 10p

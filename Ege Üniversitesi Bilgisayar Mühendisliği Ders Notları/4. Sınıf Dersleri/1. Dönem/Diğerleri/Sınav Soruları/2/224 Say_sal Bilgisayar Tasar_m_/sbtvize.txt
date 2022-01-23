@@ -1,0 +1,44 @@
+VÝZE
+1)   state diagram verilmis
+a      flip flop per state ile cozumle
+b      sequence and decoder ile cozumle
+
+2) 512k x 16 kullanarak 2M x 32 elde ediniz  ( 8 register  her satýrda 2 tane 4 satýr )
+
+3)32 bitlik bir inst. Var bunun 111 farklý komut tanýmlanmýþ, 32 tane register var
+  a)kaç tane iþlem tanýmlanabilir 2^7=128>111   (7 bit)
+  b)register için kaç bir kullanýlýr 2^5=32  (5 bit)
+  c)opearand unsigned týr alabileceði min max deðeler 7+5=12  32-12 =20 bit operand için  1 bit sign için .19 bit kalýr .. min -2^19  max + 2^19  -1
+
+4) single cycle kontrol mekanizmasýný üniteleri çizerek açýklayýnýz.
+
+5)  s1 s0         operation
+     -------         -------------
+     0  0           paralel load
+     0  1           complement
+     1  0           shift up
+     1  1           shift down    
+
+multiplexlar kullanarak tasarla.. sadece 1 bit göstermek yeterli
+
+
+*************************************************************************************
+
+
+1)one flipflop per state ve sequence…. Yöntemiyle
+SO state i: X1=0 ? S1 e gider
+                 X1=1 ve X2=0?S1 e gider
+                 X!=1 ve X’=1?S2 
+S1 state i :koþulsuz  SO a gider
+S2            :X1=1 iken S1
+                 X1= 0 iken yine S1 ama Z1=1 atayarak. Ä°ki tane Z1 Z2 çýktýlarý da var. 
+
+X1 iki ayrý yerde koþul yaratma için geçiyor. (s0-s2 arasý ve s2-s1 arasý)
+
+2)32 bitlik bir inst. Var bunun 7 biti opcode, ki tane 6  þar bitlik register alaný var ve 13 bitlik operand alaný
+  a)kaç tane iþlem tanýmlanabilir
+  b)kaç tane register adreslenebilir
+  c)opearand unsigned týr alabileceði min max deðerler
+
+3)Bu soru kitaptaki 10-3/10-4 ün bir benzeri veriler deðiþik sadece
+4)4 ‘te B-4 Kartalý nýn dediði 

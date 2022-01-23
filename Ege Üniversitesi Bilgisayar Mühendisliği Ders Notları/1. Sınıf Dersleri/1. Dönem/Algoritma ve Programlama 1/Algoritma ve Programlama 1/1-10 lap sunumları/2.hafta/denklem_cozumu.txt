@@ -1,0 +1,30 @@
+Denklem Çözümü (Trembley s:76-77 soru:5): 
+
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,c,d,e,f,ortak_payda;
+    float x,y;
+
+    printf("a b c katsayilarini aralarinda birer bosluk birakarak giriniz:");
+    scanf("%d %d %d",&a,&b,&c);
+    printf("d e f katsayilarini aralarinda birer bosluk birakarak giriniz:");
+    scanf("%d %d %d",&d,&e,&f);
+
+    ortak_payda=a*e-b*d;
+
+    if (ortak_payda==0)
+        printf("sonuc yok!");
+    else {
+        x=(float)(c*e-b*f)/ortak_payda;//hem pay hem payda tamsayi ise bolme isleminin sonucu tamsayi olur.
+        y=(float)(a*f-c*d)/ortak_payda;//(float) ile bolme isleminin sonucu reel sayiya donusturuluyor.
+        printf("x=%f",x);
+        printf("y=%f",y);
+    }
+
+    return 0;
+}

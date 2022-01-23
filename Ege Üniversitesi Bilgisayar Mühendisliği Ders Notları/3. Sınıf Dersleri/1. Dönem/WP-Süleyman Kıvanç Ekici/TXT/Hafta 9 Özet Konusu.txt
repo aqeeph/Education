@@ -1,0 +1,10 @@
+Chapter 22: ADO.NET Part II: The Disconnected Layer..............859
+
+Chapter 23: ADO.NET Part III: The Entity Framework.................927
+
+Chapter 25: Introducing Windows Communication Foundation .....985
+ 
+Herbir konu el yazýsý ile ve  min 3er sayfa olarak özetlenecektir. 
+Sýnavdaki opsiyonel sorular bu kýsýmlardan ve aþaðýdaki kýsýmdan çýkacaktýr.
+ 
+Chapter 20: File I/O and Object Serialization..........................753

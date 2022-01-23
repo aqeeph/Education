@@ -1,0 +1,20 @@
+Merge Sort 575-579
+Duality 613 Disjunctive normal form 618
+Functional Completeness 619
+Binary Coded Decimal Form 135
+One's Complement 135
+Recursive Algorithm 211-217 
+------------------------------------
+Çarþamba günü olacak ayrýk yapýlar finali ile ilgili olarak Vecdi
+Hoca'nýn dediklerinden bahsedeyim istedim ben.
+Mat2 finali gibi Ayrýk Yapýlar finali de 90 dk. olacak.(Hoca kýsa
+sürede çözümlere ulaþmamýzý istiyormuþ.)
+Sýnav graph aðýrlýklý olacakmýþ.Þöyle ifade etti kendisi;"eski
+konulardan (vize konularýndan) 3 tane soru çýkarsa 10 soruluk bir
+sýnavda gerisini graph sorarým. Ders kitabýndaki graph sorularýný
+anlayarak çözerseniz bir sorun olmaz." dedi.
+Sýnavýn dili ilgili bir þey söylemedi ama dönem baþýnda sorularýn
+ingilizce olacaðýný vurgulamýþtý.
+
+Sözün özü , sýnav 90 dk. dýr ve graph aðýrlýklý bir sýnavla
+karþýlaþacaðýz. 

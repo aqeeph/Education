@@ -1,0 +1,29 @@
+BUNU YAPMAYA GEREK KALMADI ALMAN REÝS YAPMIÞ
+BU MANTIK YANLIÞ. SOLDAN ARAMA OLACAK. ALMAN REÝSÝNKÝ DOÐRU.
+for u length ten dan 0 a göre 
+a  35-17 pattern.length()-position of saðdan ilk a
+b  35-5
+c  35 pattern.length(). because c yok
+d
+e
+f
+g
+h
+i   ilk bulunca continue yaparýz.
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+x
+w
+u
+v
+y
+z

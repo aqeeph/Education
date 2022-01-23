@@ -1,0 +1,13 @@
+Web Servisleri 
+25 soru D/Y. klasik özgür gümüþ sýtayla. incik cincýk taným ne varsa öðrenmek lazým. (25 puan)
+10 soru boþluk doldurma, yine özgür gümüþ sýtayla. 
+9-10 soru taným.. (20 puan)
+*web servisleri ne demektir?
+*web servislerinde kullanýlan standartlar nelerdir?
+*static ve dinamic servis keþfi ne demektir?
+*servis tanýmýna neden ihtiyaç duyulur?
+*baþlýca iki asenkronize mesajlaþma tipini anlatýnýz. 
+*temel iki web servisi tipleri nelerdir?
+*servis modeli rolleri nelerdir?
+gibi gibi. son iki sorudan tam emin deðilim de bunun gibi bir þeylerdi. (10 soru hepsi 5er puan)
+1 soru da basit bir aðaç vermiþ, bunu XML olarak gösterimini istemiþ. (5 puan)

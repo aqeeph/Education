@@ -1,0 +1,60 @@
+Anket Sonuclari:
+
+Belirsiz sayida kisiye, 5 seçenekli 10 sorudan olusan bir anket uygulanmistir. Seçenekler su sekildedir:
+a: KESINLIKLE KATILMIYORUM
+b: KATILMIYORUM
+c: NE KATILIYORUM NE KATILMIYORUM
+d: KATILIYORUM
+e: KESINLIKLE KATILIYORUM
+Kisiler sorularda belirtilen görüse katilip katilmadiklarini kendileri için en uygun seçenegi (a,b,c,d,e) isaretleyerek belirtebilmekte ya da soruya cevap vermeyebilmektedirler. Ankete katilan kisilerin sorulara vermis olduklari cevaplar (cevaplamadiklari sorular için bosluk karakteri), “anket.txt” isimli siradan erisimli bir dosyaya kaydedilmistir. Buna göre, bu dosyayi kullanarak ankete katilan kisi sayisini bulan ve her soru için, her seçenegin isaretlenme yüzdesini ve bos birakanlarin yüzdesini asagidaki gibi listeleyen bir program yaziniz:
+
+Ankete katilan kisi sayisi:
+
+Soru No a% b% c% d% e% Bos%
+------- -- -- -- -- -- ----
+
+
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#define SORU_SAY 10
+
+int main()
+{
+	FILE *fptr;
+	int i,j,kisi_sayisi=0;
+	char cevap,karakter;
+	int cevap_sayisi[SORU_SAY][5]={{0}};//1. boyut soru sayisini, 2. boyut secenekleri ifade ediyor
+	int bos_sayisi;
+
+	fptr=fopen("anket.txt","r");
+	while(!feof(fptr)) {//dosyadaki kayit sayisi bilinmedigi icin dosyanin sonuna kadar
+	    kisi_sayisi++;
+	    for (i=0;i<SORU_SAY;i++) {
+            	fscanf(fptr,"%c",&cevap);
+                //cevap=getc(fptr);ustteki satirin alternatifi
+                if (cevap!=' ')//kisi soruyu bos birakmamissa
+                    cevap_sayisi[i][cevap-'a']++;
+            }
+            fscanf(fptr,"%c",&karakter);//satir sonu karakterini okur
+	}
+	fclose(fptr);
+
+    printf("Ankete katilan kisi sayisi:%d\n\n",kisi_sayisi);
+    printf("Soru No  a(%%)   b(%%)   c(%%)   d(%%)   e(%%)  Bos(%%)\n");
+    printf("------- ------ ------ ------ ------ ------ ------\n");
+    for(i=0;i<SORU_SAY;i++) {
+        printf("  %2d   ",i+1);
+        //once, o soruyu bos birakanlarin sayisi, toplam kisi sayisina esitleniyor
+        bos_sayisi=kisi_sayisi;
+        for(j=0;j<5;j++) {
+            printf("  %5.2f",(float)cevap_sayisi[i][j]*100/kisi_sayisi);
+            //o soruyu bos birakanlarin sayisi, her secenegi isaretleyenlerin sayisi kadar azaltiliyor
+            bos_sayisi=bos_sayisi-cevap_sayisi[i][j];
+        }
+        printf("  %5.2f\n",(float)bos_sayisi*100/kisi_sayisi);
+    }
+
+	return 0;
+}

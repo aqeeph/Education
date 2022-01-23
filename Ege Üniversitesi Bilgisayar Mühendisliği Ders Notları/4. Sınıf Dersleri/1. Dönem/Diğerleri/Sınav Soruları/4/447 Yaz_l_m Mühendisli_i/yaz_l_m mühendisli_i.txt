@@ -1,0 +1,9 @@
+Yazýlým Mühendisliði...
+8 soru test. (24)
+*proje yönetimi aktiviteleri nelerdir? (4 tane) (8)
+*sistem mimarisi oluþtururken açýk ve net olmanýn faydalarý nelerdir? (3 tane) (6)
+*metin editörü için durum diyagramý çiziniz. yani bir editorü, 2 þekilde açýlabilir. bir var olan kayýtlý bir dosyanýn üzerine çift týklama ile ya da direk boþ bir editörü baþlatma ile. ve kapatýrken kaydedeyim mi diye sorar. dosyanýn ismi varsa direk kaydeder ve kapatýr. yoksa isim giriþi ister ve isim girildikten sonra kapatýr. bunun için state diyagram çizin demiþ. (15)
+*software engineering methods nedir açýklayýnýz. (8)
+*requierement dökümantasyonunda natural language kullanýmýndan doðan problemler hangi alternatif yollarla çözümlenir? (12)
+*3 generic viewpoint nedir açýklayýnýz kýsaca.(12) 
+*bir telefon faturasý oluþturma sistemi yapacaksýnýz. Sistemin yapacaðý þey, yurtiçi ve yurtdýþý konuþmalara göre fatura hesaplamak. yani konuþma verileri girilecek input olarak. hesaplama çýkacak output olarak. böyle bir sistem için hangi control modeli kullanmalýsýnýz, neden ? (15)

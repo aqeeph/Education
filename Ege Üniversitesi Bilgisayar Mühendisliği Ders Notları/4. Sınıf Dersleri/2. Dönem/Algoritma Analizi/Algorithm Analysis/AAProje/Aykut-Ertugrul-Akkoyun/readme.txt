@@ -1,0 +1,3 @@
+Bölüm 1 in sonucunu görüntülemek için Sorting klasöründeki part1.java çalýþtýrýlmalýdýr. Ayrýca kodda belirtilen konuma part1_outfile.txt eklenmelidir.
+Bölüm 2 nin sonucunu görüntülemek için Part2 klasörü import edilip part2.java çalýþtýrýlmalýdýr. Dosya iþlemleri için de yine kodda belirtilen konuma part2_infile.txt ve part2_outfile.txt eklenmelidir.
+Bölüm 3 ün sonucunu görebilmek için MatrixChain klasöründeki MatrixChain.java çalýþtýrýlmalýdýr. Dosya yazdýrma iþlemi için kodda belirtilen konuma part3_outfile.txt eklenmelidir.

@@ -1,0 +1,221 @@
+OOAD Nedir?
+ 
+Object-oriented analysis and design, yani nesneye-yönelik analiz ve tasarým. Önceki dönemlerde alýnan (Cenk hocanýn dersiydi herhalde) nesne dersinin devamý. Bu derste amacýmýz, gerçek hayattaki bir problemi, nesneye yönelik bir tasarýma uygun olarak modellemeyi öðrenmek. Bunun için de belli yöntemler kullanýyoruz, ders bize bu yöntemleri anlatýyor. Bu ders bir programlama dersi deðil, ancak tabi nesne nedir bilmezseniz özellikle çalýþmalar ilerledikçe iþiniz zorlaþacaktýr.
+ 
+ 
+ 
+OOAD dersi için ödev/devam zorunluluðu falan ne durumda?
+ 
+ Eðer bu sorunun cevabýný bilmiyorsanýz, iþiniz zor. Devam zorunluluðu yok, ancak hemen her hafta küçük adýmlarla ilerletilen bir ödev var. Notlar sene sonunda verilecek, lâkin haftalýk ödevlerin geç teslimi not kýrýlmasý anlamýna geliyor.
+ 
+Naçizane tavsiyem, özellikle bu sene dersi takip etmenizden yana. Zira sýnýftaki tartýþmalarý takip ediyorsanýz, zaten sýnava hazýrlanmýþ oluyorsunuz.
+ 
+ 
+ 
+Çýkmýþ sorular var mý?
+ 
+En azýndan bir set soru var. Zaten bu sorular kabaca çýkacak soru potansiyelini belirliyor.
+ 
+Ýsmail Arvas’ýn gruba attýðý mesaja göre:
+ 
+1. “Referandum Tanýmlama” kullaným durumunu kitabýnýzda tanýmlanan “fully dressed” formatýna uygun olarak yazýnýz. Bu kullaným durumuna iliþkin Sistem Sýradüzen Diyagramýný (SSD) çiziniz. (30 puan)
+ 
+ 
+ 
+2. “Referandum Tanýmlama” kullaným durumu için alan modelini tanýmlayýnýz. (30 puan)
+ 
+ 
+ 
+3. Kitabýnýzdaki Monopol oyununu oyuncunun bir kareye gelince bu karede bulunan puaný aldýðý ve belirli bir puana eriþen ilk oyuncunun oyunu kazandýðý þekilde tasarlayýnýz. Dýþarýdan “Play Game” etkileþimi geliyor, bu etkileþimden sonra gerçekleþen nesne etkileþimlerini Etkileþim Diyagramý (Interaction Diagram) kullanarak çiziniz. Yararlandýðýnýz “GRASP” desenlerini nesnelerin üzerinde belirtiniz ve gerektiðinde açýklayýnýz. (40 puan)
+ 
+ 
+ 
+Ders notu/kitabý/pdf var mý? Bilgehan’da dersin kitap çýktýsý var diye biliyorum. Craig Larman’ýn Applying UML and Pattenrs: An Introduction to Object-oriented Analysis and Design and Iterative Development kitabýný iþliyoruz. Bende 3rd edition PDF’i var, sonraki sürümleri var mý bilgim dahilimde deðil.
+ 
+ 
+ 
+Ödev hakkýnda nereden bilgi alabilirim? Sýnavda ödevden soru çýkar mý? Evet, muhtemelen çýkar. Bu sorularý cevaplarken asistanlarýn da bizimle paralel hazýrladýðý projeyi baz alacaðýz. Moodle’da vizyon dökümaný ve Use Case dökümaný bulunmakta. USC dökümaný bize yollanan e-mail’den sonra güncellenmiþ, son haline bakmayý unutmayýn. Bu doküman domain modelleri de içeriyor.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+I. Problemler
+ 
+Elimizde üç adet “problem” var: NextGen POS System, Monopoly Game ve MenuPlanner (proje).
+ 
+POS, bir dükkanda gerçekleþtirilen satýþlarý kontrol ve kayýt etmek üstüne bir yazýlým. Dolayýsýyla ürün stoklarý, satýþ sýrasýnda oluþturulan “sepetler”, satýþ gerçekleþtirilmesi ve kayýtlardan sorumlu olacak.
+ 
+Monopoly game, bir oyun simülasyonu. Kurallarýn detaylarýndan ziyade, oyun baþlayýp sürene kadar ilerlemelerini saðlayan bir yazýlým.
+ 
+MenuPlanner ise, kullanýcýlara dengeli beslenme için önerilerde bulunan bir sistem.
+ 
+ 
+ 
+Okuyup geçtiðinizi tahmin ettiðim bu konu, aslýnda en önemli kýsým. “O zaman anlatsana” diyeceksiniz, siz de haklýsýnýz. Ama kullandýðýmýz yöntem, modelleme üstüne ve örneklere baktýkça her þey oturacak zaten. Demek istediðim þu: Konu nedir bilirseniz, yöntemleri de anlarsanýz, tüm adýmlarý gerçekleþtirebilirsiniz, ezberlemekten çok daha kolay olacaktýr, hem de finalde de çok daha rahat hazýrlanýrsýnýz. Hem de tabi pragmatizmi bir yana koyarsak, konuyu anlamýþ, dersin hakkýný vermiþ olursunuz.
+ 
+II. Modelleme
+ 
+ 
+ 
+Problemi kabaca tanýmladýktan sonra, modellemeye geçiyoruz. Modelledikçe daha iyi anlýyoruz, anladýkça çözüyoruz, çözdükçe daha iyi modelliyoruz, yeterince iyi kurmayý baþarýrsak sonunda þirinleri bile görüyoruz.
+ 
+ 
+ 
+Adým 1. Use Case
+ 
+Modellemenin ilk adýmlarýnda, elimizdeki tek þey, olayýn ne olduðunu biliyor olmamýz. Bu yüzden olaylarý düþünüyor, belli durumlarda olacak olaylar dizilerini kurgulayýp yazýyoruz. Bu kurgulara Use Case deniyor.
+ 
+ 
+ 
+Use Case terimleri
+ 
+Aktör: Davranýþa sahip öðelere verilen isim. Bir insan olabileceði gibi bir bilgisayar sistemi vs de olabilir. (Örn: Kasiyer, oyuncu, kullanýcý)
+ 
+Senaryo: Yazýlýmýn kullanýmýndaki belli bir süreci ifade eden terim. Her use case, içinde en az bir senaryo içerir. (Örn: “baþarýyla satýþ gerçekleþtirme”, “satýþ gerçekleþirken sistemin çökmesi”)
+ 
+Use Case: Bir ya da daha fazla senaryoyu barýndýran, yazýlým kullanýmýndaki bir sürecin genel olarak alýnmýþ hâli. (Örn: “Satýþ gerçekleþtir”, “öðün ekle”)
+ 
+ 
+ 
+Use Case yazým türleri
+ 
+Brief: Genelde tek paragraflýk, özet anlatým.
+ 
+Casual: Yan senaryolarý da anlatan birkaç paragraflýk, formal olmayan stil.
+ 
+Fully dressed:”Ana” dökümantasyon tarzý. Formatý þöyledir
+ 
+ 
+ 
+Use Case Name: USC ismi
+ 
+Scope: Tasarlanan sistemin ismi
+ 
+Level: User-goal ya da subfunction (çoðu zaman ilki olacak bizim örneklerde)
+ 
+Primary Actor: Sistemi çaðýran aktör
+ 
+Stakeholders and Interests: Bu use case’de “iþi görülen” aktörler ve istedikleri sonuçlar
+ 
+Preconditions: Baþlamadan önce gerçekleþtirilmiþ olmasý gereken koþullar
+ 
+Success Guarantee/Postconditions: Bittiðinde gerçekleþmiþ olmasý gereken durumlar
+ 
+Main success Scenario: Murphy iþlere karýþmazsa neler olacaðýný anlatan olaylar dizisi
+ 
+Extensions/Alternate Scenarios: Murphy’nin burnu iþin içine girince olacaklarý anlatan diziler
+ 
+Special Requirements: Ýþlevsel olmayan gereksinimler
+ 
+Technology and Data Variatons List: Gerekli I/O ve Data formatlarý
+ 
+Frequency of Occurence: Ne sýklýkla kullanýlacaðý
+ 
+Miscellaneous: Ýlgili diðer konular
+ 
+Adým 2. Domain Model
+ 
+ 
+ 
+Domain model, elimizdeki konuyu gerçek dünyaya ait öðelerle oluþturup açýkladýðýmýz modeldir. Programlama kýsmýna geçerken þüphesiz birçok öðe kullanýlacaktýr, ancak bu noktada düþüncemiz programlama kýsmý deðil, bahsi geçtiði gibi MADAÞ, yani “modelle-anla-daha iyi modelle-anladýkça anla-þirinleri gör” prensibidir.
+ 
+ 
+ 
+Use Case’ler için Domain Modeller hazýrlanýr, daha sonra bunlar birleþerek büyük resmi (Unified Domain Model) oluþturur.
+ 
+ 
+ 
+Adým 3.  System Sequence Diagram (SSD)
+ 
+SSD, belli bir senaryo sýrasýnda gerçekleþen aktör-sistem arasý event akýþ diyagramýdýr. Aktör’den sisteme giden oklar, sistem event mesajlarýdýr. Kesik çizgiler bunlara cevap mesajlarýdýr. Loop’lar kutuya alýnarak gösterilebilir.
+ 
+ 
+ 
+Adým 4. Interaction Diagram
+ 
+Interaction Diagramlar, sistem akýþýný anlatan diyagramlardýr. Genelde alt tür ismiyle anýyoruz bunlarý.Ýki türü vardýr:
+ 
+1. Sequence Diagram
+ 
+Daha çok kullanmamýz olasý olan, olaylar akýþý þeklinde gösterilen, SSD’yi andýran formata sahip diyagram. Notasyonu comm’a göre daha kuvvetli ve katý olduðu için avantaja sahiptir.
+ 
+2. Communication Diagram
+ 
+Bu diyagram daha farklý bir format kullanýr. Burada olaylar gerçekleþtikçe diyagram uzar. Oklarla her tarafa gidebilen bir yapýsý var, þakalý komikli bir format kendisi. Yerden falan kazandýrýr ve tabi belli durumlarda avantajlýdýr. Ancak örneklerimizde sequence daha rahat ve daha az kafa karýþtýrýcýymýþ gibi geliyor. Yine de kabaca ne olduðunu bilmekte fayda var.
+ 
+ 
+ 
+III. GRASP
+ 
+Wikipedia’dan az önce okuduðuma göre General Responsibility Assignment Software Patterns diye, büyük çabalarla Ýngilizce bir kelimeye dönmüþ bu kýsaltmanýn Türkçesi “Genel Sorumluluk Atama Yazýlým Örgüsü gibi biþey oluyor. GSAYÖ demesi çok rahat olmadýðýndan GRASP diyelim.
+ 
+Bu patternler, tasarýmýmýzý yaparken göz önünde bulunduracaðýmýz rehberler. Hepsi belli tasarým sorularýna cevap gibi de düþünülebilir (kitaptan çaldým). Bizi kötü tasarýmdan koruyan yazýlým melekleri, bunlarý sevip korumamýz gerekiyor. Ýyi de anlamak gerekiyor. Rehber olduklarýný tekrardan hatýrlatmak isterim. Zaman zaman çeliþtikleri de oluyor. Kesin gibi düþünmektense, “mümkün þartlarda uyulmasý gereken kurallar” gibi düþünmek daha doðru olabilir.
+ 
+Þu noktada bizi ilgilendirenler þunlar:
+ 
+ 
+ 
+Creator
+ 
+Yeni sýnýflarý kim yaratacak?
+ 
+Bu soru bazen þaþýrtmacalý olabiliyor. Genelde eðer bir sýnýf, diðerini kapsýyorsa, “kaydediyorsa”, içeriyorsa ya da kullanýyorsa, diðer sýnýfýn yaratýcýsý olmasý iyi bir fikir olabilir. Örneðin POS’ta bir satýþa ait her bir eleman, saleslineitem olarak geçiyor. Yani Sale=Sepet, SalesLineItem=2 adet Kalem gibi bir þey. Sale, salesLineItem’ý içerdiði için, salesLineItem’larý Sale sýnýfý yaratsýn dememiz mantýklý görünüyor.
+ 
+ 
+ 
+Creator genelde low coupling’i de getirecektir. Sonuçta zaten ilgili iki sýnýfý baðlayýnca, muhtemelen gereksiz bir bað kurmaktan kurtulmuþ oluyoruz..
+ 
+ 
+ 
+Information Expert/Expert
+ 
+Sorumluluklarý neye gore, kime vereceðiz?
+ 
+Information Expert diyor ki, bir iþleme ait bilgiler kimdeyse, o yapsýn. Tabi tersten de düþünülebilir, yani eðer bir iþi yapacak sýnýf daha belli gibiyse ve diðer prensiplere ters düþmeyecekse, bilgileri o sýnýfýn tutmasýný isteyebiliriz. Genel olarak diyoruz ki “Herkes bildiði iþi yapsýn”.
+ 
+Üstteki örnekten gidersek, Sale, Expert’e göre bir satýþýn toplam ücretini hesaplama sorumluluðunu almalýdýr. Çünkü salesLineItem’larý o tutar (SLI diyeceðim bundan sonra). Ancak her bir ürünün alt-toplamýný SLI’lar tutmalýdýr, çünkü ürün bilgilerini ve ürün sayýsýný tutan SLI’dýr.
+ 
+ 
+ 
+Info Expert genelde High Cohesion ve Low Coupling’i destekler, zira hem odaklanmanýn artmýþ olmasý, hem de yeni bir bað eklenmemiþ olmasý olasýdýr.
+ 
+ 
+ 
+Controller
+ 
+Sistem operasyonlarýný UI katmanýndan sonra alan ve kordine eden (kontrol eden) öðe hangisidir?
+ 
+Bu iþ için genelde bir ya da daha fazla sistem atýyoruz. Mesela “Sale” iþlemlerinin tümünde controller görevi yapacak bir SaleController olacaðý gibi, “SystemController” diye tüm sistemi kapsayan bir controller da olabilir. Diðer patternleri göz önünde bulundurup, sistemin geniþliðine göre karar vermek önemli
+ 
+ 
+ 
+ 
+ 
+Low Coupling
+ 
+Sistemin deðiþikliklerden az etkilenmesini, düþük baðýmlýlýða ve yüksek yeniden kullanýlýrlýk deðerine sahip olmasýný nasýl saðlarýz?
+ 
+Coupling (aklýna dizi gelenler?) kelime anlamý olarak eþleþme demek. Sistemimizde düþük eþleþme istiyoruz. Niye?
+ 
+Bir sistem hayal edin. Mesela Controller’dan gidelim. Sistemdeki TÜM UI tek bir controller’a baðlý olsun. Adýna da SysC diyelim. SysC haliyle birçok sýnýfa baðlý olacak, mesaj alýþveriþinde bulunacaklar.
+ 
+Peki SysC’yi deðiþtirirsek? Hop, tüm sýnýflarý bir elden geçirmek gerekebilir. Ya da daha kötüsü, alt sistemlerden birisini deðiþtirdik ve SysC’de bir deðiþiklik yapmamýz gerekti. Hop, zincirleme olarak bu sefer SysC’deki deðiþiklikten dolayý öbür sistemleri de deðiþtirmek gerekti. Bir sürü iþ.
+ 
+Low Coupling diyor ki, herkesi sadece iþi olan sýnýflarla eþleyin ve bu eþleþmeleri mümkün surette azaltýn, böylece sisteminiz daha stabil, daha kolay kullanýlan ve kontrol edilebilen bir hâl alýr.
+ 
+ 
+ 
+High Cohesion
+ 
+Nesnelerin odaklanmýþ ve anlaþýlabilir olmasýný nasýl saðlayabiliriz
+ 
+Low Coupling’in büyük kankasý olan High Cohesion, yüksek yoðunluk anlamýna geliyor. Burada yoðunluktan kasýt, odaklanmak diyebiliriz. Kabaca, bir sýnýfa çok fazla görev vermemek gerekiyor. Verilen görevlerin de birbiriyle ilgili olmasý gerekiyor. Özelleþtiriyoruz yani. Bir sýnýf SaleLineItem’larý yaratýyor, kullanýcý isimlerini tutuyor ve satýþ sonunda bilgileri database’e atýyorsa, yanlýþ bir þeyler var demektir.
+ 
+ 
+ 
+Fark ettiðiniz üzere Low Coupling ve High Cohesion, diðer üçü gibi sýnýflara verilen sorumluluklardan ziyade, genel tasarým prensipleri. O yüzden sýnavda ilk üçü için, ilgili sorumluluða ait sýnýftan ok çýkýp “bunu creator’a göre seçtim, çünkü öbürünü kapsýyor” diye açýklarken, LC ve HC’yi ya bu notlarýn içinde ya da ayrýca açýklamanýz gerekecektir.

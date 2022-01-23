@@ -1,0 +1,3 @@
+Aþaðýdaki bölümler  2þer sayfa (toplam 4)özetlenecek.
+Chapter 9: Collections and Generics ....................................321
+Chapter 10: Delegates, Events, and Lambda Expressions ....359

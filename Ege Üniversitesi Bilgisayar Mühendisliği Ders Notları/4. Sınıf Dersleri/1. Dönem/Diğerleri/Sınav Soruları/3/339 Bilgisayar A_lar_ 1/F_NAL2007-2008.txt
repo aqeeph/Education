@@ -1,0 +1,124 @@
+28 puanlýk klasik bölümde:
+1- Týp Göz B sýnýfý ethernet að, Týp Psikiyatri B sýnýfý ethernet að, Eczacýlýk C sýnýfý 
+token ring að bir routerla birbirine baðlý. Eczacýlýk ayný zamanda A sýnýfý bir WAN'a bir 
+routerla baðlý.
+-Yapýyý çiziniz.
+-Aðlara uygun IP deðerleri veriniz.
+-Routerlara uygun IP deðerleri veriniz.
+
+2-Adana Bursa arasýnda 800 oktetlik bilgi kaybolmuþtur. Kalabalýk önleme yöntemiyle bu bilgi gönderilecektir.
+ Adana Bursa'ya 100 oktetlik bilgi göndermiþ Bursa'dan da gittiðine dair ACK mesajý dönmüþtür. Bundan sonraki 
+adýmlarý çizerek gösteriniz.
+
+72 puanlýk testten aklýmda kalan sorular þýklar hatýrladýðým kadarýyla þöyle:
+
+1-Hangisi veri iletim yolu birimlerinden deðildir?
+Hub
+Modem
+Bus
+Router
+Multiplexer
+bi dane daha
+
+2-Hangisi anahtarlama iþlemini yapar?
+Router
+Modem
+Ethernet Switch
+Multiplexer
+2 dane daha
+
+3-Hangisi standart belirleyen kuruluþlardan deðildir?
+IEEE
+OSI
+ANSI
+ECMA
+IETF
+EIA
+
+4-Hangi katman kullanýcýyý aðýn fiziksel etkilerinden izole etmiþtir?
+Að katmaný
+Sunum katmaný
+Fiziksel katman
+Veri Baðlantý katmaný
+Oturum katmaný
+Aktarým katmaný
+
+5-Hangileri dinamik statik kalabalýk önleme algoritmalarýdýr?(I,II,III þeklinde)
+Leaky Bucket
+Token Bucket
+Choke Packets
+
+6-Video konferans için hangi algoritma daha uygundur?
+Hop-by-Hop Choke Packets
+Leaky Bucket
+Token Bucket
+Fair Queueing
+falan filan 2 dane daha
+
+7-Stop and Wait Polling ....., Continuous ARQ ....dir." cümlesinde ... yerlerine ne gelmelidir?
+Simplex/Half Duplex/Full Duplex
+
+8-Datagram, Cell, Frame, DTE Packet, 2 tane daha Packet kavramlarýyla ilgili bir soru
+
+9-Hangisi özel IP adresi deðildir?
+255.255.255.255
+0.0.0.0
+4 dane daha
+
+10-IP adresleriyle ilgili hangisi yanlýþtýr sorusu
+32 bitten oluþur
+prefix ve suffix olarak iki kýsma ayrýlýr
+4 dane daha
+
+11-Adres Çözümleme Protokolünü nedir
+ARP
+
+12-Hangisinide mesaj iletim hata raporu gelmez?
+Bitlerin birisi bozulduðunda
+Gönderilecek datagramýn büyüklüðünün alýcýnýn DTU'sundan büyük olmasý durumunda
+Routerýn gönderici olarak kendisinin yanlýþ seçildiðini anlamasý durumunda
+Router, paket yerine ulaþmadýðýný gördüðünde
+2 dane daha
+
+13-Hangisleri point-to-point mantýðýndadýr?
+Hiyerarþik
+Bus
+Star
+Ring
+Mesh
+
+14-Hangisi sayýsal verileri sayýsal sinyallere kodlama yöntemi deðildir?
+Manchester
+Differential Manchester
+Bipolar
+Pseudoterny
+Modulation
+Non Return to Zero(NRZ)
+
+15-Peer to peer de hangilerini içeririr
+	I-TDM(Time division)
+	II-Carrier Sense
+	III-TMA(multiple access)
+
+16-Xon/Xoff, RTS/CTS , Pooling ile ilgili bir soru galiba hangileri RS232C kullanýr?
+
+17-Göndericiyle alýcý arasýndaki trafiði kontrol etmek için kullanýlan mekanizma nedir?
+Flow Control
+Congestion Control
+Fair Queueing
+Weight Fair Queueing
+2 dane daha
+
+18- Self clocking code, self modulation code, vs...
+
+19- iki DTE arasý iletim var, biri hýzlý biri yavaþ hangi protokol kullanýlýr?
+	Flow kontrol olmasý lazým cevabýn
+
+20-Yerel alan aðlarý ile ilgili hangileri doðrudur?
+	I- topolojileri vs.. bakýmýndan diðer aðlardan farklýdýr
+	II-IEEE standrtlarýna göre her an iletimde bulunulabilir.
+	III- IEEE standartlarýna göre vs.. vs.. (Cevap hepsi)
+
+21-ULAKNET hangi tiptedir?(Cevap Ýþbirliði amaçlý)
+
+22-Packet ve framelerle ilgili bi soru hangi katmanda hangisi yer alýr?

@@ -1,0 +1,2 @@
+Chapter 11: Advanced C# Language Features ......399 ve
+Chapter 12: LINQ to Objects ...........439 özetlenecek 2*2= 4 sayfa olarak.

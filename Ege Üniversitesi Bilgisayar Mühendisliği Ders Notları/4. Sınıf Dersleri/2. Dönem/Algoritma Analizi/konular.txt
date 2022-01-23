@@ -1,0 +1,87 @@
+Table of Contents of the Textbook (Introduction to the Design and Analysis of Algorithms  3rd Edition)
+
+1   Introduction 1
+1.1 What Is an Algorithm? 3
+1.2 Fundamentals of Algorithmic Problem Solving 9
+1.3 Important Problem Types 18
+1.4 Fundamental Data Structures 25
+
+2   Fundamentals of the Analysis of Algorithm Efficiency 41
+2.1 The Analysis Framework 42
+2.2 Asymptotic Notations and Basic Efficiency Classes 52
+2.3 Mathematical Analysis of Nonrecursive Algorithms 61
+2.4 Mathematical Analysis of Recursive Algorithms 70
+2.5 Example: Computing the nth Fibonacci Number 80
+2.6 Empirical Analysis of Algorithms 84
+2.7 Algorithm Visualization 91
+
+3   Brute Force and Exhaustive Search 97
+3.1 Selection Sort and Bubble Sort 98
+3.2 Sequential Search and Brute-Force String Matching 104
+3.3 Closest-Pair and Convex-Hull Problems by Brute Force 108
+3.4 Exhaustive Search 115
+3.5 Depth-First Search and Breadth-First Search 122
+
+4   Decrease-and-Conquer 131
+4.1 Insertion Sort 134
+4.2 Topological Sorting 138
+4.3 Algorithms for Generating Combinatorial Objects 144
+4.4 Decrease-by-a-Constant-Factor Algorithms 150
+4.5 Variable-Size-Decrease Algorithms 157
+
+5   Divide-and-Conquer 169
+5.1 Mergesort 172
+5.2 Quicksort 176
+5.3 Binary Tree Traversals and Related Properties 182
+5.4 Multiplication of Large Integers and Strassen’s Matrix Multiplication 186
+5.5 The Closest-Pair and Convex-Hull Problems
+
+6   Transform-and-Conquer 201
+6.1 Presorting 202
+6.2 Gaussian Elimination 208
+6.3 Balanced Search Trees 218
+6.4 Heaps and Heapsort 226
+6.5 Horner’s Rule and Binary Exponentiation 234
+6.6 Problem Reduction 240
+
+7   Space and Time Trade-Offs 253
+7.1 Sorting by Counting 254
+7.2 Input Enhancement in String Matching 258
+7.3 Hashing 269
+7.4 B-Trees 276
+
+8   Dynamic Programming 283
+8.1 Three Basic Examples 285
+8.2 The Knapsack Problem and Memory Functions 292
+8.3 Optimal Binary Search Trees 297
+8.4 Warshall’s and Floyd’s Algorithms 304
+
+9   Greedy Technique 315
+9.1 Prim’s Algorithm 318
+9.2 Kruskal’s Algorithm 325
+9.3 Dijkstra’s Algorithm 333
+9.4 Huffman Trees and Codes 338
+
+10   Iterative Improvement 345
+10.1 The Simplex Method 346
+10.2 The Maximum-Flow Problem 361
+10.3 Maximum Matching in Bipartite Graphs 372
+10.4 The Stable Marriage Problem 380
+
+11   Limitations of Algorithm Power 387
+11.1 Lower-Bound Arguments 388
+11.2 Decision Trees 394
+11.3 P, NP, and NP-Complete Problems 401
+11.4 Challenges of Numerical Algorithms 412
+
+12   Coping with the Limitations of Algorithm Power 423
+12.1 Backtracking 424
+12.2 Branch-and-Bound 432
+12.3 Approximation Algorithms for NP-Hard Problems 441
+12.4 Algorithms for Solving Nonlinear Equations 459
+
+APPENDIX A
+Useful Formulas for the Analysis of Algorithms 475
+
+APPENDIX B
+Short Tutorial on Recurrence Relations 479

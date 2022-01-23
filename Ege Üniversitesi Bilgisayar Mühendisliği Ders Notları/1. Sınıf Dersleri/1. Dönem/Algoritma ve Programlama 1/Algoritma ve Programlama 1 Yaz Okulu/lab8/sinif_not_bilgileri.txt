@@ -1,0 +1,77 @@
+Sinif Not Bilgileri:
+
+En fazla 100 ögrenci kapasiteli bir sinifta okuyan ögrencilerin dönem sonu notlarina göre sinifla ilgili bazi istatistiksel bilgilerin listelenmesini saglayacak bir program yazilmasi istenmektedir. Önce sinif mevcudu (2=mevcut=100), daha sonra her ögrencinin dönem sonu notu (0=not=100) kullanicidan alinmalidir. Siniftaki tüm ögrencilerin dönem sonu notlari alindiktan sonra ise asagida belirtilen istatistiksel bilgiler listelenmelidir:
+
+-Sinif not ortalamasi
+-Standart sapma
+-Dönem sonu notu, sinif not ortalamasinin üstünde olanlarin sayisi ve sinif içindeki yüzdesi
+-En yüksek ve en düsük dönem sonu notlari
+
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define MINKAPASITE 2
+#define MAXKAPASITE 100
+#define MINNOT 0
+#define MAXNOT 100
+
+int sayi_al(int, int);
+
+int main()
+{
+    int mevcut,sayac;
+    int notlar[MAXKAPASITE];
+    int toplam_not=0;
+    float sinif_ort,fark,fark_kare_top,standart_sapma;
+    int ort_ustu_say=0;
+    int min_not=MAXNOT;
+    int max_not=MINNOT;
+
+    printf("Sinif mevcudu girisi:\n");
+    mevcut=sayi_al(MINKAPASITE,MAXKAPASITE);
+
+    for (sayac=0;sayac<mevcut;sayac++) {
+        printf("%d. ogrencinin donem sonu notu girisi:\n",sayac+1);
+        notlar[sayac]=sayi_al(MINNOT,MAXNOT);
+        toplam_not=toplam_not+notlar[sayac];
+    }
+
+    sinif_ort=(float)toplam_not/mevcut;
+
+    fark_kare_top=0;
+    for (sayac=0;sayac<mevcut;sayac++) {
+        fark=notlar[sayac]-sinif_ort;
+        fark_kare_top+=fark*fark;
+        if (notlar[sayac]>sinif_ort)
+            ort_ustu_say++;
+
+        if (notlar[sayac]>max_not) max_not=notlar[sayac];
+        if (notlar[sayac]<min_not) min_not=notlar[sayac];
+    }
+
+    standart_sapma=sqrt(fark_kare_top/(mevcut-1));
+
+    printf("sinifin not ortalamasi=%.2f\n",sinif_ort);
+    printf("standart sapma=%.2f\n",standart_sapma);
+    printf("sinif not ortalamasinin ustundeki ogrencilerin sayisi=%d\n",ort_ustu_say);
+    printf("sinif not ortalamasinin ustundeki ogrencilerin yuzdesi=%.2f\n",(float)ort_ustu_say*100/mevcut);
+    printf("siniftaki en yuksek not=%d\n",max_not);
+    printf("siniftaki en dusuk not=%d\n",min_not);
+
+    return 0;
+}
+
+int sayi_al(int alt_sinir, int ust_sinir)
+{
+    int sayi;
+
+    do {
+        printf("lutfen %d ile %d arasinda bir tamsayi giriniz:",alt_sinir,ust_sinir);
+        scanf("%d",&sayi);
+    } while (sayi<alt_sinir || sayi>ust_sinir);
+
+    return sayi;
+}

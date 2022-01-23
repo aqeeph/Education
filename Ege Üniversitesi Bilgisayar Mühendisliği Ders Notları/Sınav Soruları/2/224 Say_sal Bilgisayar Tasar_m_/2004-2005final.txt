@@ -1,0 +1,53 @@
+1)
+a)In what circumstances multiple cycle microprogrammed control is adventagenous over single cycle microprogrammed control?(10)
+b)Design a multiple cycle microprogrammed control unit for a computer with following properties:
+-The control memory consists of 512 words of 32 bits
+-The instruction set consists of 95 instructions.Each instruction has a register field and a 5 bit operand part.The datapath has 16 registers.
+-Opcode fields of the instructions correspond to the address of the 1st microinstruction of the operation in the control memory.
+-The alternatives for the address of the next instruction are:
+   -address of the current instruction +1
+   -the address given in an unconditional branch instruction.
+   -the addres given in an conditional branch instruction testing 2 and N flags.(20)
+
+2)
+Using a 4 bit counter with paralel load and 4-bit adder, draw the logic diagram with standart graphic symbols that implements the following statements.(20)
+T1: R1 ‹ R1+R2
+__
+T1T2: R1 ‹  R1+1
+
+3)
+What is the difference between a dynamic and static RAM?A 256 Mbit DRAM uses 4 bit data and has equal length row and column addresses.How many address pins does the DRAM have?(20)
+
+4)
+Soruda bir tane ASM Chart þekli var.Þekli ben çizmiyorum.
+a)For the ASM chart given in the figure, draw a state diagram representing all states and the transitions between them.(10)
+b)Implement the control using one flip flop per state method.(10)
+
+5)A system is to have the following set of register transfers, implemented using registers and dedicated multiplexers.Draw a block diagram for the system.(10)
+
+T1 : R0 ‹ R1
+T2 : R3 ‹ R1, R1 ‹ R4, R4 ‹ R0
+T3 : R2 ‹ R3, R0 ‹ R2
+T4: R2 ‹ R4, R4 ‹ R2 
+ 
+ Moderatöre Bildir    Logged  
+ 
+ 
+ 
+B-4 Kartalý 
+Beni Foruma Gömün
+
+Offline
+
+Mesaj Sayýsý: 519
+
+
+
+Üyelik Bilgileri Özel Mesaj (Offline)   Ynt: 2004-2005 Final Sorularý 
+« Yanýtla #1 : Haziran 08, 2006, 05:28:20 ÖS » Bu mesajý alýntý ile cevapla  
+
+--------------------------------------------------------------------------------
+Kullandýðýmýz kitap 2. düzenleme.Hoca acaba 3. düzenlemenin sorularýndan soruyor olmasýn!!!
+http://www.writphotec.com/mano/problem_solutions.html adresinde konu sonlarýndaki problemlerin çözümü var.Geçen sene Aylin Hoca statik ve dinamik ram'ler arasýndakiþ farký sormuþ.9. konunun 11. ve 12. sorularýnýn cevaplarýnda bu ramleri açýklayan cevaplar var sanki.Gerçi geç oldu ama bakacaksýnýz bir bakýn isterseniz. 
+ 
+ 

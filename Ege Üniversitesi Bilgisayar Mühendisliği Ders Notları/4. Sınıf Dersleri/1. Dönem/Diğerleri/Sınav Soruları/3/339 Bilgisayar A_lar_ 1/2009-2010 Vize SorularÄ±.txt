@@ -1,0 +1,21 @@
+2009-2010 Vize Sorularý
+
+bu sene biraz farklý olarak 22 sorudan oluþan bir testten ibaretti sýnav.klasik kýsým yoktu
+
+yine 6 þýklý yine bol detaylar.
+konular da geçen yýlla hemen hemen ayný tabi.
+hatýrladýklarýmýz þunlar:
+
+- yerel alan aðlarýnýn özellikleri
+- bluetoothun en derin özellikleri(bluetooth hücreden hücreye sürekli geçiþleri düzenlemek ve bu ortamda çalýþmak için dizayn edilmemiþtir.
+- metropol alan aðlarýnýn özellikleri(IEEE 802.6 standardý man'larda kullanýlan bilinen en eski standarttýr.)
+- aðlarýn büyükten küçüðe sýralanmasý (WAN-MAN-LAN-HAN-PAN)
+- kitabýn 31. sayfasýndaki þekli gösterek "host-a-- modem--modem--host-b" deki dte ve impleri sormuþ.
+- topolojilerle ilgili 2-3 soru vardý.(halka, hiyerarþik ve taþýt)
+- sayýsal verilerin analog sinyal kodlamalarý(genlik-frekans-faz)
+- sayýsal verilerin sayýsal kodlamalarý
+- bir frame'in içeriði
+- baðlantý temelli- baðlantýsýz temelli
+- packet, frame , framing.(boþluk doldurmaca)
+- stop and wait - continuous arq
+- xon-xoff-, RTS/CTS- Time multiple access 

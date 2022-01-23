@@ -1,0 +1,14 @@
+Veri Madenciliði. 
+
+*4 sütun 9 satýrdan oluþan bir veri seti hazýrlayýnýz. 
+a- 3. kolonu üzerinde 3-interval daðýlýmý gösteriniz. 
+b- 3. kolon üzerinde equal width smoothing by boundry yöntemini uygulayýnýz. 
+(25)
+
+*baðýmlýlýk kuralýna göre, bir veri setinde min support deðeri %60 olan tekli itemlarý bulup listeleyen bir program kodu yazýnýz. hangi dilde istersen. (25)
+
+*sequential bir dataset vermiþ, bunun içinde min. supportu %40 olan tüm itemsetleri support deðerleri ile birlikte listeleyin. (25)
+
+*kocaman bir dataset var yine. bir verinin bir deðerinin tahminlenmesi isteniyor. bayes ve 4-nearest neighbor yöntemleri kullanýlarak tahminleme yapýn. (25) 
+
+evet ne yazýk ki bu da pek kolay bir sýnav deðil 

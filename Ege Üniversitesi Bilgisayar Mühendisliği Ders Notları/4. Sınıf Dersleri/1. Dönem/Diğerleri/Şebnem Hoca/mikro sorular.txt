@@ -1,0 +1,30 @@
+1)Tek bir silikon kýlýf üzerinde toplanmýþ entegre devreye ........  denir.
+ cevap:mikrodenetleyici
+2)Aþaðýdakilerden hangisi mikrodenetleyiciler için doðru deðildir?
+	a)Tek-çip devre elemanýdýrlar
+	b)Sistem kararlarý genellikle harici sinyallere baðlýdýr
+	c)Elektronik bir cihazýn davranýþlarýný denetlerler ve kontrol ederler
+	d)Tek baþlarýna çalýþamazlar
+cevap: d
+
+3) .....   mimarisi mikrodenetleyici tasarýmýnda standart hale gelmiþtir
+	cevap:Harvard	
+4)  
+	I)Temel prensip: donaným her zaman yazýlýmdan hýzlýdýr
+	II)Her iþlem için farklý bir komut kullanýr
+	III)Karmaþýk Komut Set Bilgisayarý anlamýna gelmektedir
+CISC için hangisi veya hangileri doðrudur?
+	a) Yalnýz I
+	b) I ve II
+	c) II ve III
+	d) Hepsi
+ cevap: Hepsi
+
+
+5) Boþ býrakýlan yerleri Doðru(D) veya Yanlýþ(Y) ile doldurunuz
+ 
+   ....   RISC mimariler CISC lere göre komutlarý daha hýzlý iþletmektedir. (D)
+   ....   8051 in 32 bitlik 2 tane timer registeri vardýr (Y)
+   ....   TMOD ve TCON registerlarý timerlar tarafýndan ortak kullanýlabilir (D)
+   ....   TMOD registeri bit adreslenebilirdir	 (Y)
+

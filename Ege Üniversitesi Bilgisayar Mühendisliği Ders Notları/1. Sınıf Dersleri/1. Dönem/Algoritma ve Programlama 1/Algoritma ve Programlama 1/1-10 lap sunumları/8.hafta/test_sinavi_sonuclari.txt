@@ -1,0 +1,87 @@
+Test Sinavi Sonuclari:
+
+Bir sýnýfta uygulanan a, b, c, d, e seçenekli tek soruluk bir test sýnavý sonucunda bazý istatistiksel bilgilerin listelenmesini saðlayacak bir program yazýlmasý istenmektedir. Bunun için önce sýnýf mevcudu (>0), sonra da öðrencilerin test sorusuna verdiði cevaplar (‘a’, ‘b’, ‘c’, ‘d’, ‘e’ ya da boþluk karakteri) kullanýcýdan alýnmalýdýr. Daha sonra sorunun doðru cevabý (‘a’, ‘b’, ‘c’, ‘d’, ‘e’ karakteri) kullanýcýdan alýnmalý ve aþaðýda belirtilen istatistiksel bilgiler listelenmelidir:
+
+- Doðru, yanlýþ ve boþ yüzdeleri
+- En çok iþaretlenenden en az iþaretlenene doðru sýralý olarak, seçeneklerin iþaretlenme sayýlarý (bunun için seçenekleri temsil eden harfleri tutan bir vektör daha kullanýlmalý ve sýralama iþlemi yapýlýrken her iki vektörün elemanlarý paralel olarak yer deðiþtirilmelidir)
+
+Secenek Isaretlenme Sayisi
+------- ------------------
+   d           25
+   a           22
+   b           12
+   e           11
+   c            5
+
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int mevcut;
+    char ogr_cevap,dogru_cevap;
+    int cevap_sayisi[5]={0};
+    char secenek[5]={'a','b','c','d','e'};//sadece siralama isleminde kullanilacak
+    int i,bos_sayisi=0,yanlis_sayisi;
+    int yer_degisti;//kabarcik siralama islemini erken bitirmek icin kullanilacak
+    char gecici_char;
+    int gecici_sayi;
+
+    do{
+        printf("Sinif mevcudunu giriniz:");
+        scanf("%d",&mevcut);
+    }while(mevcut<1);
+
+    for(i=0;i<mevcut;i++) {
+        do{
+            printf("%d. ogrencinin cevabini giriniz(a,b,c,d,e ya da bosluk):",i+1);
+            fflush(stdin);
+            ogr_cevap=getchar();
+        }while((ogr_cevap<'a' || ogr_cevap>'e')&&(ogr_cevap!=' '));//karakterlerin ascii kod karsiliklari olan sayilar isleme tabi tutulur
+
+        if (ogr_cevap==' ')
+            bos_sayisi++;
+        else
+            cevap_sayisi[ogr_cevap-'a']++;//her 2 karakteri de derleyici tamsayiya donusturuyor
+            /*ustteki satirin alternatifleri:
+            cevap_sayisi[(int)ogr_cevap-(int)'a']++;//her 2 karakteri de biz tamsayiya donusturuyoruz
+            cevap_sayisi[ogr_cevap-97]++;////ogrencinin cevabini derleyici tamsayiya donusturuyor
+            cevap_sayisi[(int)ogr_cevap-97]++;//ogrencinin cevabini biz tamsayiya donusturuyoruz
+            */
+    }
+
+    do{
+        printf("Sorunun dogru cevabini giriniz(a,b,c,d,e):");
+        fflush(stdin);
+        dogru_cevap=getchar();
+    }while(dogru_cevap<'a' || dogru_cevap>'e');
+
+    yanlis_sayisi= mevcut-bos_sayisi-cevap_sayisi[dogru_cevap-'a'];
+    printf("Dogru cevap veren ogrencilerin yuzdesi: %.2f\n", (float)cevap_sayisi[dogru_cevap-'a']*100/mevcut);
+    printf("Yanlis cevap veren ogrencilerin yuzdesi: %.2f\n", (float)yanlis_sayisi*100/mevcut);
+    printf("Bos birakan ogrencilerin yuzdesi: %.2f\n", (float)bos_sayisi*100/mevcut);
+
+    do{
+        yer_degisti=0;
+        for(i=0;i<4;i++){
+            if(cevap_sayisi[i]<cevap_sayisi[i+1]) {
+                gecici_sayi=cevap_sayisi[i];//Isaretlenme sayisi yer degistiriliyor
+                cevap_sayisi[i]=cevap_sayisi[i+1];
+                cevap_sayisi[i+1]=gecici_sayi;
+                gecici_char=secenek[i];//Secenek adi yer degistiriliyor
+                secenek[i]=secenek[i+1];
+                secenek[i+1]=gecici_char;
+                yer_degisti=1;//En az 1 kez yer degistirme islemi yapildi
+            }
+        }
+    }while(yer_degisti==1);
+
+    printf("Secenek Isaretlenme Sayisi\n");
+    printf("------- ------------------\n");
+    for(i=0;i<5;i++)
+        printf("   %c          %d\n",secenek[i],cevap_sayisi[i]);
+
+    return 0;
+}

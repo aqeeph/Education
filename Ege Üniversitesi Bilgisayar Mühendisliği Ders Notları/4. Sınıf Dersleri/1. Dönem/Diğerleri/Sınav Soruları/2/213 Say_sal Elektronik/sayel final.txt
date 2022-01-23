@@ -1,0 +1,28 @@
+
+ 	
+2008-2009 Final SorularÄ± 
+-npn t- flip flop Ã§izip aÃ§Ä±kla
+
+-flash adc Ã§iz aÃ§Ä±kla
+
+-ttl nand Ã§izmiÅ?.aÃ§Ä±kla..ama kitaptakinden biraz farklÄ± Å?kil..
+
+-astabil multivibratÃ¶r.. birsÃ¼rÃ¼ direnÃ§ ve kapasitÃ¶r deÄ?ri vermiÅ?.Å?klini Ã§iz.. b-e c-e grafiklerini Ã§iz..
+
+
+GeÃ§en sene Ã?bnem Hoca finalde Ã§Ä±kacak sorulara iliÅ?in tÃ¼yolr vermiÅ?i. VerdiÄ? tÃ¼yolardan yaklaÅ?±k 30-40 puanlÄ±k soru Ã§Ä±kmÄ±Å?Ä±. Yani kitabÄ±n sonundaki metin kÄ±smÄ±ndan. Hard disk, cdrom Ã§alÄ±Å?a yapÄ±sÄ±nÄ±n anlatÄ±ldÄ±Ä?± kÄ±sÄ±mdan... YanlÄ±Å?hatÄ±rlÄ±yor da olabilirim...
+cdromu sormuÅ?u.
+
+
+
+vizede ilk soruda diyotta grafik fln buldurmuştu ya yine ondan gelcek denio
+sonra bi tane tranzistör noise margain i ni bulma
+rtl,dtl,ttl den birini açıklatma
+multivibratör
+açıklatma
+ve adc dac matematiksel problem
+benm duyduklarım bunlar ama nekdr dorudur bilemi,yorum
+burcu copy paste yaptım
+deno ya göndermiştim
+böle bi söylenti var
+haberin olsun

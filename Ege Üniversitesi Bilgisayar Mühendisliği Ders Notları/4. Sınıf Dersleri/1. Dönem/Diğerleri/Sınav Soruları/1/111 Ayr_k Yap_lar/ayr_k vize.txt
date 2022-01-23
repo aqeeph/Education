@@ -1,0 +1,10 @@
+?-->Prove that 3+3 • 5+3 • 5^2+• • •+3 • 5^n=3(5^n+1?1)/4 whenever n is a nonnegative integer
+-->Show that if a, b, k and m are integers such that k ?1, m ? 2, and a==b (mod m) then 
+a^k== b^k (mod m) whenever k is a positive integer.
+-->Describe the average-case performance of the linear search algorithm, assuming that the element x is in the list
+-->What are the Big Omega and Big Theta Notations? Explain each of them
+-->Give as good a big-O estimate as possible for (nlog n + n^2 )(n^3 + 2)
+-->For the following binary numbers, if each expansion is a two’s complement representations of length five represent, what are the integers they represent?
+a) 11001 b) 01101 c) 10001 d) 11111
+-->Convert (2B3EA)16(16 lýk taban) from its hexadecimal expansion to its binary expansion
+

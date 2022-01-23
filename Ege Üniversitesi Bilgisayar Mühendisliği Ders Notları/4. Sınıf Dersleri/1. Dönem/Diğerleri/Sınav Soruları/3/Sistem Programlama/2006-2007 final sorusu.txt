@@ -1,0 +1,11 @@
+Sýnav 2 sorudan oluþuyordu. Ýlk soru geçen senenin finalinin 1.sorusunun benzeriydi. Sadece 3  ayrý program vardý.
+Bu 3 ayrý program için,
+1)obje kod oluþturulmasý
+2)bu obje kodun yerleþtirilmesi(sayfa 131,132 figure 3.9 gibi...)
+3)sayfa 139 daki gibi load-map tablosunun çýkartýlmasý
+(kýsaca 3.2.2 Program Linking konusu)
+
+toplam 70 puan
+
+2)<dec-list>,<dec> ve <type> için Recursive-descent parse procedure'lerini yazýnýz.
+30 puan

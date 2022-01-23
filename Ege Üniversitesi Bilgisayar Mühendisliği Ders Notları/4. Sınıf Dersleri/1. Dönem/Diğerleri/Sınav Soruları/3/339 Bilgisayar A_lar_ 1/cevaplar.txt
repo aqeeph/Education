@@ -1,0 +1,18 @@
+1)Multiplexer
+2)Ethernet Switch
+3)OSI
+4)Aktarým katmaný
+5)leaky,token statik,,, choke dinamik
+6)RSVP olmalý
+7)Half Duplex/Full Duplex
+8)??
+9)o iki verdiðiniz de özel adres demek ki cevap bu þýklar dýþýnda
+10)verdiðiniz iki þýk da doðru
+11)ARP
+12)Bitlerin birisi bozulduðunda
+13)Bus
+14)Modulation
+15)??
+16)??
+17)Flow Control
+NOT: bir iki yanlýþ olabilir

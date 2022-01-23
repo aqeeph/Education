@@ -1,0 +1,23 @@
+2008-2009 Vize Soruları
+Klasik kısım 2 soruydu:
+1-Ä°stanbul'daki HostA'dan Ankara'daki HostB'ye 5 adet frame yollanıyor. Bu framelerden 2 nolu frame'in bozuk olduÄŸu ortaya Ã§ıkıyor. Selective Repeat yÃ¶ntemini kullanarak sorunu Ã§Ã¶zÃ¼nÃ¼z. Ãekillerle aktarımı baÅŸından sonuna kadar aÃ§ıklayınız.
+2-  a)Ä°stanbul'daki HostA iÃ§indeki uygulama ile Ankara'daki HostB iÃ§indeki uygulama arasında kurulan mantıksal baÄŸlantıyı ÅŸekil Ã§izerek gÃ¶steriniz.
+     b)Bilgisayar aÄŸlarında baÅŸlıca bulunması gereken dÃ¶rt ana bileÅŸeni yazınız. Bunların her birine birer Ã¶rnek veriniz.
+
+Test kısmı 20 soruydu(Hadi bakalım Melik Duyar!)
+1-Bilgisayar AÄŸları tanımı
+2-MAN
+3-Bluetooth
+4-Frame-Packet iliÅŸkisi
+5-Cell, Frame, Packet kavramları
+6-Veri Ä°letiÅŸiminde YÃ¶ntemler-AraÃ§lar iliÅŸkisi
+7-Bilgisayarların birbirlerine baÄŸlanma ÅŸekilleri
+8-DCE
+9-Ring Bus'ta Token Yapısı
+10-BaÄŸlantı temelli -BaÄŸlantısız baÄŸlantı-Ortam Algılamalı Ã‡arpıÅŸmalı Sistemler
+11-Veri BaÄŸlantı Katmanı
+12-Hata Bulma 
+13-Hata DÃ¼zeltme
+14-Subnet kavramı
+
+20'de 14...iyi deÄŸil.

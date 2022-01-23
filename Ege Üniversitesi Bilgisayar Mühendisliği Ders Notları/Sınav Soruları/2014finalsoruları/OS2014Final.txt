@@ -1,0 +1,13 @@
+Ýþletim Sistemleri Final 2014
+
+5 soru herbiri 20 puan
+
+1)tlb - meory eriþme zamanlý hesaplamalý kýsa bir soru
+
+2) bir stirng girdisi var 3 2 1 5 4 2 gibi lru - fifo - optimal ile iþletip page fault sayýlarýnýn bulunmasý
+
+3) fcfs \ round robin vs. algoritmalarýnýn iþletimi gannt chart la gosterimi
+
+4) wokring set nedir ?  onemini açýklayýn ?
+
+5) (10. ünitedeki) I\O türleri nedir açýklayýn.

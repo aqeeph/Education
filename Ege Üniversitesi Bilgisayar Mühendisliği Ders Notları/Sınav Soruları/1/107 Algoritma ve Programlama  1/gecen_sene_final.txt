@@ -1,0 +1,29 @@
+Soru 1: Bir sayfalýk kocaman bir kodun çýktýsýný yazmaýydýk. Bu kodun
+içinde kullanmamalýyýz diye sürekli uyardýklarý global deðiþkenler de
+vardý. Static deðiþken, global deðiþken, normal deðiþken =), dizi (2
+ve tek boyutlu), pointer (olmazsa olmaz), bir çok operatör ve for
+döngülerinin olduðu ekrana yazý yazdýran bir programdý.
+=)
+
+Soru 2: Seçim ödevinin basitleþtirilmiþ versiyonuydu. Örnek çýktýda
+hata vardý. :D
+
+Soru 3: Ýngilizce kelime istatistikleri ile alakalýydý. Ýngiliz
+alfabesinde bulunan 26 karakterden birinin olabileceði en fazla 20
+karakter uzunluðunda veri giriþi yapýlýyor. Veri giriþini bitirmek
+için *** girilmesi gerekiyor. Tüm kelimeler girildiðinde þöyle bir
+istatistik çýkarýlmasý gerekiyor:
+
+Her harfin kelimede kaçýncý harf olarak kaç defa kullanýldýðý,
+toplamda kaç defa kullanýldýðý
+ÖRNEK:
+HARF 1.KONUM 2.KONUM 3.KONUM ..... 20.KONUM TOPLAM
+A      3       1       62              0      87
+B  ....
+
+þeklinde.
+
+Bir þeyler daha yazdýrýyorduk ekrana ama o kadar hatýrlamýyorum.
+
+Soru 4 sanýrým bonus olandý. Vakit yetmediði için yapamadým, ve
+haliyle hatýrlamýyorum. =) 

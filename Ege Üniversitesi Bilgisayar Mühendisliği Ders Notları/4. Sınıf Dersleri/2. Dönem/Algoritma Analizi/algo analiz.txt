@@ -1,0 +1,10 @@
+1.Verilmiþ olan 5 adet iþlemin order-growth sýralamasý
+2.Obeb algoritmasýnýn recursive oalrak yazýlmasý
+3. T(n)= 2 T (n/2) + n -1 backward substition yöntemi ile çözün
+4.Doðal dille yazýlmýþ algoritmanýn Poseude Kod ile yazýlmasý
+4-b. yazýlan bu kodun time efficiency
+5.verilen dizinin minimum ve maximum deðerlerini bulan fonksiyon algoritmasý devide-and-concurer kullanarak
+6.Ternary search algoritmasýnýn recursive olarak yazýlmasý.
+6.b bu algororitmanýn n=2^k için time effincincy
+baþka biralgororitmanýn n=3^k için time effincincy
+6 soru fakat 4 soruda 4 þýk vardý

@@ -1,0 +1,16 @@
+*ezber soruo 
+*ilk üniteden
+*dillerin özelliðini falan testte 
+*soruo 
+*test 30 puan 
+*20 puan bnf war 
+*dý 
+*ýýýuu sonnraaa 
+Salim (17:06):
+*direk ezber olarak 
+*tpe inferencing 
+**type
+*dangling pointer
+*lost heap dyn.. li biseler wardý 
+*bunlarýn açýklamalarýný sormustu
+*kod olarak da C dilini kullanarak pointer aritmetiði kullanan bi örnek yazýn dedi 

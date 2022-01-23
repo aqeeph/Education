@@ -1,0 +1,20 @@
+2014 database final
+
+1-a)join kümeleri 7 tane eþleþtirmece. 7*2=14 puan
+
+  b)bir sql sorgusu verilmiþ neden bu sorgu yazýlamaz diyor, içinde join iþlemi vardý.  6 puan
+
+2- conceptual vs logical vs physical model, conceptual modelin veri yapýsý ve dbms açýsýndan önemi 15 puan
+
+3- eer dönüþtürme  35 puan
+
+4- 4 tablolu bir tane db modeli verilmiþ,
+  
+    a) i) soyadý smith olan satýcýlarýn sattýðý arabýnýn opsiyonlarýý bulan gibi  (5 puan)
+
+      ii) ve ilkine benzeyen  sorgularýn   Relational Algebra ile gerçekleþtirimi. (5 puan)
+  
+    
+    b) yine bir sorgunun yapýlmasý gerken anlatýlmýþ, iki farklý þekilde relational algebrayla 
+    yapýlmasý istenmiþ,sonra bu iki sorgunun maaliyet hesaplmasýyla kýyaslanmasý istenmiþ (fakat
+    hesaplama için bazý sabitler verilmiþ)   (20 puan)

@@ -1,0 +1,134 @@
+Basit Bir Menu Programi:
+
+Önce asagida prototipleri ve ne yaptiklari belirtilen fonksiyonlari yaziniz:
+
+void hakkinda(void): programi yazan kisinin ad-soyad bilgisini ekrana yazdirir
+int karenin_alani(int kenar): karenin alanini döndürür
+void dikdortgen_ciz(int uzun, int kisa): ‘*’ karakterini kullanarak ekrana dikdörtgen çizer
+int faktoriyel(int sayi): verilen sayinin faktöriyelini döndürür
+int kombinasyon(int n, int k): n'nin k'li  kombinasyonlarinin sayisini döndürür
+
+Daha sonra main fonksiyonu içerisinde, asagidaki gibi basit bir menü araciligiyla kullanicinin tercihine göre ilgili islemlerin yapilmasini saglayan bir program yaziniz:
+
+(1) Dikdörtgen çizme
+(2) Karenin alanini bulma
+(3) Faktöriyel bulma
+(4) Kombinasyon bulma
+(5) Hakkinda
+(0) Çikis
+Seçiminizi giriniz:_
+
+Kullanici tercihini dogru bir sekilde(0-5 arasinda) girinceye kadar bekletilmeli ve 1-5 arasinda bir deger girdiginde ilgili alt program çagrilarak islem gerçeklestirilmeli ve menüye dönülmelidir. Kullanici 0 girdiginde ise çikmak istediginden emin olup olmadigi sorulmali, eminse programdan çikilmali, degilse tekrar menü görüntülenmelidir.
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//fonksiyon prototipleri
+void hakkinda();
+int karenin_alani(int);
+void dikdortgen_ciz(int,int);
+int faktoriyel(int);
+int kombinasyon(int,int);
+
+int main()
+{
+    int secim,kenar1,kenar2,alan,n,k;
+    char cikis=;
+
+    do{
+        //menü yazdiriliyor...
+        printf("1. Dikdortgen cizme...\n");
+        printf("2. Karenin alanini bulma...\n");
+        printf("3. Faktoriyel bulma...\n");
+        printf("4. Kombinasyon bulma...\n");
+        printf("5. Hakkinda...\n");
+        printf("0. Cikis...\n");
+
+        do{
+            printf("\nSeciminizi giriniz:");
+            scanf("%d",&secim);
+        }while (secim<0 || secim>5);//secim dogru girilinceye kadar bekleniyor...
+
+        //kullanicinin istegini yerine getirecek ilgili fonksiyon cagriliyor...
+        switch (secim) {
+            case 1:
+                printf("Dikdortgenin kenar olculerini giriniz:");
+                scanf("%d %d",&kenar1,&kenar2);//once fonksiyonun argumanlari isteniyor...
+                if (kenar1>kenar2)//uzun kenar belirleniyor...
+                    dikdortgen_ciz(kenar1,kenar2);//fonksiyon cagriliyor
+                else
+                    dikdortgen_ciz(kenar2,kenar1);//fonksiyon cagriliyor
+                break;
+            case 2:
+                printf("Karenin kenar uzunlugunu giriniz:");
+                scanf("%d",&kenar1);//fonksiyona gonderilecek arguman kullanicidan isteniyor...
+                alan=karenin_alani(kenar1);//fonksiyon cagriliyor ve dondurdugu deger saklaniyor...
+                printf("Karenin alani %d dir.\n",alan);
+                break;
+            case 3:
+                printf("Faktoriyeli bulunacak sayiyi giriniz:");
+                scanf ("%d",&n);
+                printf("%d!=%d\n",n,faktoriyel(n));//fonksiyon cagriliyor ve dondurdugu deger yazdiriliyor...
+                break;
+            case 4:
+                printf("Kombinasyonu bulunacak sayilari giriniz:");
+                scanf ("%d %d",&n,&k);
+                printf("%d nin %d li kombinasyonlarinin sayisi %d dir.\n",n,k,kombinasyon(n,k));
+                break;
+            case 5:
+                hakkinda();//deger dondurmeyen fonksiyon cagriliyor
+                break;
+            case 0:
+                do{//cevap dogru girilinceye kadar bekleniyor...
+                    printf("Cikmak istediginize emin misiniz(e/E/h/H)?:");
+                    fflush(stdin);
+                    cikis=getchar();
+               }while (cikis != 'e' && cikis != 'E' && cikis!='h' && cikis!='H');
+        }
+    }while(cikis == 'H' || cikis == 'h');
+    //}while(cikis != 'E' && cikis != 'e');//ustteki satir, bu sekilde de yazilabilir
+    //}while (!(cikis == 'E' || cikis == 'e'));//ustteki satir, bu sekilde de yazilabilir
+
+    return 0;
+}
+
+void hakkinda()//parametre almayan-dondurmeyen fonksiyon ornegi
+{
+    printf("Tum haklari saklidir, Ozgur Gumus\n");
+    return;
+}
+
+int karenin_alani(int kenar)//parametre alan-donduren fonksiyon ornegi
+{
+    return kenar*kenar;
+}
+
+void dikdortgen_ciz(int uzun,int kisa)//parametre alan-dondurmeyen fonksiyon ornegi
+{
+    int i,j;
+
+    for(i=1;i<=kisa;i++)
+    {
+        for(j=1;j<=uzun;j++)
+            printf("*");
+        printf("\n");
+    }
+}//fonksiyon geriye deger dondurmuyorsa, return kullanilmayabilir...
+
+int faktoriyel(int sayi)//hem ana programdan, hem baska bir fonksiyondan cagrilan fonksiyon ornegi
+{
+    int carpan,carpim;
+
+    carpim=1;
+    for(carpan=sayi;carpan>1;carpan--)
+        carpim=carpim*carpan;
+
+    return carpim;
+}
+
+int kombinasyon(int n,int k)//baska bir fonksiyon kullanan/cagiran fonksiyon ornegi
+{
+    return faktoriyel(n)/(faktoriyel(k)*faktoriyel(n-k));//faktoriyel fonksiyonu 3 kez cagriliyor...
+}

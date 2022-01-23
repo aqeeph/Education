@@ -1,0 +1,110 @@
+bi tane timer kesin çýkacak dedi.2ci olarak bi tane memori orgnization yani donaným çizme sorusu. 3. olarak adresleme modlarýndan kod sorusu 
+olur dedik son olarak da logic aritmetik komutlarý kullanma sorusu
+
+bana kalýrsa sf 64 deki paragrafta yazan örnek gibi verecek.çözümü sf 66 da var
+
+mikroiþlemci - mikro denetleyici farký nedir
+
+
+-----------------
+2011-2012 vize
+?1) 8051, 2 adet Eprom, 2 adet Sram, LCD ve bir adet 74bilmem kaç ý entegre halinin þeklinin çiziniz. Veri ve adres yollarýný gösteriniz.
+
+2) 55H bilgisini 40H'tan 45H'a kadar olan adreslere yükleyiniz.
+a)Doðrudan 
+b)Dolaylý 
+c)Döngülü
+
+3) x tabanýnda verilen 3 basamaklý sayýyý y tabanýna çeviren programý yazýnýz. (abc)x=>(def)y
+a sayýsý R3, b sayýsý R4, c sayýsý R5, x tabaný R6 ve y tabaný R7 kayýtçýlarýndadýr. d, e ve f sayýlarý dönüþtürme sonunca 30H, 31H ve 32H 
+adreslerine yazýlacaktýr.
+
+?4)500 hz lük frekansýn %30’u p1.0 giriþini 1 leyecek, geri kalan zamanda 0 layacak. Bunu gerçekleþtiren assembly kodu
+
+2a)
+MOV 40H, #55H
+MOV 41H, #55H
+MOV 42H, #55H
+MOV 43H, #55H
+MOV 44H, #55H
+
+2b)
+MOV R0, #40H
+
+MOV @R0, #55H
+INC R0
+MOV @R0, #55H
+INC R0
+MOV @R0, #55H
+INC R0
+MOV @R0, #55H
+INC R0
+MOV @R0, #55H
+
+;VEYA
+;MOV R1, #55H
+;MOV @R0, R1
+
+2c)
+MOV R0, #40H
+MOV R1, #5
+
+LOOP:
+MOV @R0, #55H
+INC R0
+DJNZ R1, LOOP
+
+3)
+MOV R3, #1H
+MOV R4, #2H
+MOV R5, #3H
+MOV R6, #8H
+MOV R7, #9H
+;(abc)X = a.X²+b.X+c (önce 10'luk tabana)
+MOV A, R6 ;X² için
+MOV B, R6
+MUL AB
+MOV B,R3 ;a.X²
+MUL AB
+MOV 20H, A
+
+MOV A, R6 ;b.X
+MOV B, R4
+MUL AB
+
+ADD A, R5 ;c'yi ekle
+ADD A, 20H
+
+MOV B, R7
+DIV AB
+MOV 32H, B
+MOV B, R7
+DIV AB
+MOV 31H, B
+MOV 30H, A
+
+
+
+4)
+Count1 EQU -600
+Count2 EQU -1400
+CLR p1.0
+JNB P1.0,ATAMA1
+JB P1.0,ATAMA2
+BASLA:
+MOV TMOD,#01
+SETB TR0
+WAIT: JNB TF0, WAIT
+CLR TF0
+CPL p1.0
+JNB P1.0,ATAMA1
+JB P1.0,ATAMA2
+ATAMA1:
+MOV TH0,#HIGH Count2
+MOV TL0,#LOW Count2
+JMP BASLA
+ATAMA2:
+MOV TH0,#HIGH Count1
+MOV TL0,#LOW Count1
+JMP BASLA
+end

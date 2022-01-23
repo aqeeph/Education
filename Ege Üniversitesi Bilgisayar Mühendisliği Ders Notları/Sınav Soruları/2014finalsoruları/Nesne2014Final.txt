@@ -1,0 +1,11 @@
+Nesne 2014 Final
+
+1) 15 puanlýk kod çýktýsý sorusu. static deðiþkenler vardý, constructor vs. li bir soru.
+
+2) polymorphic type assignment sorusu 15 puan
+
+3) 10 puanlýk exception handling yapan bir kodun çýktýsýnýn sorusu
+
+4) 25 puanlýk  hazýr sýnýflar verilmiþ 3 tane refactoring þekinde template ile yeniden yazýlmasý 
+
+5) 35 puanlýk strateji patternli yine interaktif giden çok þýklý kod yazdýrmalý soru

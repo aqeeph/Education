@@ -1,0 +1,29 @@
+Dakika Ekleme:
+
+Kullanicidan simdiki zamani saat ve dakika olarak alan ve ayrica buna eklenecek toplam dakikayi alan ve daha sonra bu toplam dakikanin simdiki zamana eklenmesi sonucunda olusan yeni zamani yine saat ve dakika olarak yazdiran programi yaziniz (zaman 24 saat üzerindendir).
+
+-------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int saat,dakika,eklenecek_dakika,eklenecek_saat,top_dk;
+
+    printf("lutfen saat:dakika seklinde saati giriniz:");
+    scanf("%d:%d",&saat,&dakika);
+
+    printf("lutfen eklemek istediginiz dakikayi giriniz:");
+    scanf("%d",&eklenecek_dakika);
+
+    top_dk=dakika+eklenecek_dakika;
+    eklenecek_saat=top_dk/60;
+    saat=saat+eklenecek_saat;
+    saat=saat%24;
+    dakika=top_dk%60;
+
+    printf("saat %d:%d'dir.",saat,dakika);
+
+    return 0;
+}

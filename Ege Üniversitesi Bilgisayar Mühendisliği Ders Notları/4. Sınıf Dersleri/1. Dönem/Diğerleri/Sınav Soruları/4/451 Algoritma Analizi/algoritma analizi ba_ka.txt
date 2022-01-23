@@ -1,0 +1,29 @@
+merhaba gençlik, yine benim popoma kaçan ve sizlere kaçmamasýný temenni ettiðim bir sýnav ile karþýnýzdayým. günün spesyali Algoritma Analizi.
+
+* verilen n^küp logn gibi ifadelerin growth of order sýralanmasý(10p)
+*verilen big O big teta vs gibi notasyonlarýn için T/F (5p)
+*1 tane algoritma vermiþ. 
+-bu algoritma ne iþ yapar? (3)
+-basic operation nedir? (2)
+-basic operation kaç kere çalýþýr? (5)
+-growth of order nedir? (3)
+-daha etkin bir þekilde tekrar yazýnýz.(7)
+
+*T(n)=2T(n/2)+6n-1 i backward subtition yöntemi ile yapýn. n = 2^k (10)
+
+*while n!=0
+r<- m mod n
+m<- n
+n<- r
+return m
+bu algoritmayý recursive olarak yazýn. (10)
+
+*sýralý bir dizi düþünün. bu dizi içinde A[i]=i olan eleman varsa bulan bir algoritma yazýn. Divide and conquer tekniðini kullanýn ve recursive olsun. ayrýca algoritmanýn growth of orderý O(n) olsun. bu algoritmanýn O(n) olduðunu reccurence ile gösterin. C(n) i yazýn yani. master teoremi kullanýn. (20)
+
+*k-ary search algoritmasýný anlatmýþ. bu algoritmanýn:
+-recurrence denklemi nedir? (7)
+-tekniði nedir?(3)
+-recurrence denkleminin backward subtition ile çözün. (10)
+-binary search ile etkinlik kýyaslamasý yapýn. hangisi daha etkindir neden? (5)
+
+eyyorlamam bu kadar.

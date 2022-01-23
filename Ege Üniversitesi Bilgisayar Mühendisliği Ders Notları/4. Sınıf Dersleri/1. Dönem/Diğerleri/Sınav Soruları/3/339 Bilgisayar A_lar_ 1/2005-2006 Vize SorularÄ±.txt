@@ -1,0 +1,6 @@
+2005-2006 Vize Soruları
+1...OSI modeli
+2-Xon/Xoff protocol
+3-3 katman OSI modeli
+4-Token Tutan kova algoritma
+5-???hartilamiyom
