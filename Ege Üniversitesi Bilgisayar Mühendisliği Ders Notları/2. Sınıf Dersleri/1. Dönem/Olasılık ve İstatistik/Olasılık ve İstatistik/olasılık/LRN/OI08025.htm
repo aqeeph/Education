@@ -1,0 +1,65 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<link rel="stylesheet" href="abstyle.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="15" class="content">
+<tr valign="top">
+<td>
+<p font class="baslik">8.2. BASİT TESADÜFİ ÖRNEKLEME</p>
+			
+<p>Uygulamada başvurulabilecek birçok örnekleme tekniği mecvuttur. Ancak <b>Basit 
+Tesadüfi Örnekleme</b>, diğer örnekleme teknikleri içinde en yaygın olarak bilinen 
+örnekleme türüdür. Bu yüzden öncelikle bu yöntemin açıklanması uygun 
+görülmüştür. Basit Tesadüfi Örnekleme kısaca, N büyüklüğündeki bir anakütleden 
+her biri n birimden oluşan
+<img border="0" src="pics/B08/OI0802.gif" width="25" height="25" align="absmiddle"> 
+sayıda örnek çekme yöntemidir. Bu örneklerin hepsi eşit seçilme şansına 
+sahiptir.</p>
+<p>Uygulamada n birimli örneklerin oluşumu, birimleri teker teker çekmek 
+suretiyle oluşturulur ve her birimin örneğe girme olasılığı n/N olduğundan çekim 
+birer birer yapılır. Önce anakütledeki birimler 1 den N'e kadar numaralanır daha 
+sonra bunların arasından n tanesi kura veya tesadüfi sayılar tablosu yardımıyla 
+çekilir. Birim sayısı az ise kura yöntemi uygulanabilir. Ancak birim sayısı 
+arttıkça tesadüfi sayılar tablosundan yararlanmak mecburi hale gelir. Tesadüfi 
+sayılar tabloları çok sayıdaki rakamların ardarda sıralanmasıyla elde edilmiş 
+olup, birbirini izleyen rakamlar arasında hiçbir ilişki yoktur. Bu tablolar 
+günümüzde bilgisayar vasıtasıyla yaratılmaktadır.</p>
+<p>n büyüklüğündeki bu örneklerin her birinin eşit çekilme şansına sahip olduğunu 
+kanıtlamak oldukça basittir. Tek bir örnek, yani n sayıda birimden oluşan tek 
+bir seri düşünüldüğünde, n tane birimden birini çekme olasılığı n/N dir. İkinci 
+çekme işleminde, geriye kalan (n-1) birimden birini çekme olasılığı (n-1)/(N-1) 
+dir ve bu şekilde n tane birim çekilene kadar işlem devam eder. Çekilen bu 
+örnekteki her birim örnekte yalnız ve yalnız bir kez yeralmakta yani çekim 
+iadesiz yapılmaktadır. Bu kural
+<img border="0" src="pics/B08/OI0802.gif" width="25" height="25" align="absmiddle"> 
+sayıdaki bütün n birimli örnekler için geçerlidir. Böylece n birimden oluşan 
+örneğin hepsinin birden çekilme olasılığı</p>
+<p>
+<img border="0" src="pics/B08/OI0821.gif" width="361" height="48" align="absmiddle"> 
+(4)</p>
+<p>olur ve anakütleye dahil her birimin çekilcek n birimli örneğe girme 
+olasılığı n/N dir. Ayrıca bu oran tüm birimler için aynıdır. Yukarıda da 
+belirtildiği gibi çekilen her birim anakütleden çıkarıldığı için bu yöntem <b>
+iadesiz basit tesadüfi örnekleme</b> adını alır. Şimdi büyük harfler anakütleyi, 
+küçük harfler ise örneği göstermek üzere işlemlerde kullanılacak notasyon 
+verilecektir:</p>
+      <p>Anakütleyi meydana getiren N tane birimin her biri için elde edilen değerler 
+        X<sub>1</sub>, X<sub>2</sub>,..., X<sub>N</sub>, ile gösterilir. Örnekte bu birimlere karşılık gelen değerler 
+        ise x<sub>1</sub>, x<sub>2</sub>,...,x<sub>n</sub> şeklinde ifade edilir. Genel bir notasyon aşağıdaki 
+        gibi verilebilir:</p>
+      <p><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="590" height="300">
+          <param name=movie value="pics/B08/OI08025.swf">
+          <param name=quality value=high>
+          <embed src="pics/B08/OI08025.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="590" height="300">
+          </embed> 
+        </object></p>
+      
+    </td>
+</tr>
+</table>
+</body>
+</html>
