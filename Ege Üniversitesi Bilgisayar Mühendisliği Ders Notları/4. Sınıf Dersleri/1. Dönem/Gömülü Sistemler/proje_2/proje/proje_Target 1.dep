@@ -1,0 +1,44 @@
+Dependencies for Project 'proje', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x52D44A96)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x52D46E6E)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\ek-lm3s1968 -I. -IC:\StellarisWare\utils-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM3S1968 -o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\StellarisWare\inc\hw_nvic.h)(0x00000000)
+I (C:\StellarisWare\driverlib\systick.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_ints.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_memmap.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_types.h)(0x00000000)
+I (C:\StellarisWare\utils\ustdlib.h)(0x00000000)
+I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x4EB126DC)
+I (C:\StellarisWare\driverlib\debug.h)(0x00000000)
+I (C:\StellarisWare\driverlib\gpio.h)(0x00000000)
+I (C:\StellarisWare\driverlib\pin_map.h)(0x00000000)
+I (C:\StellarisWare\driverlib\interrupt.h)(0x00000000)
+I (C:\StellarisWare\driverlib\sysctl.h)(0x00000000)
+I (C:\StellarisWare\driverlib\timer.h)(0x00000000)
+I (C:\StellarisWare\boards\ek-lm3s1968\drivers\rit128x96x4.h)(0x00000000)
+I (C:\Users\TOSHIBA\Documents\4. Sýnýf Dersleri\Gömülü Sistemler\proje_2\proje\PWMLEDDriver.h)(0x52CF447C)
+F (C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib)(0x00000000)()
+F (C:\StellarisWare\boards\ek-lm3s1968\drivers\rit128x96x4.c)(0x00000000)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\ek-lm3s1968 -I. -IC:\StellarisWare\utils-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM3S1968 -o .\rit128x96x4.o --omf_browse .\rit128x96x4.crf --depend .\rit128x96x4.d)
+I (C:\StellarisWare\inc\hw_ssi.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_memmap.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_sysctl.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_types.h)(0x00000000)
+I (C:\StellarisWare\driverlib\debug.h)(0x00000000)
+I (C:\StellarisWare\driverlib\gpio.h)(0x00000000)
+I (C:\StellarisWare\driverlib\pin_map.h)(0x00000000)
+I (C:\StellarisWare\driverlib\ssi.h)(0x00000000)
+I (C:\StellarisWare\driverlib\sysctl.h)(0x00000000)
+I (C:\StellarisWare\boards\ek-lm3s1968\drivers\rit128x96x4.h)(0x00000000)
+F (.\PWMLEDDriver.c)(0x52D46242)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\ek-lm3s1968 -I. -IC:\StellarisWare\utils-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM3S1968 -o .\pwmleddriver.o --omf_browse .\pwmleddriver.crf --depend .\pwmleddriver.d)
+I (C:\StellarisWare\inc\hw_memmap.h)(0x00000000)
+I (C:\StellarisWare\inc\hw_types.h)(0x00000000)
+I (C:\StellarisWare\driverlib\debug.h)(0x00000000)
+I (C:\StellarisWare\driverlib\gpio.h)(0x00000000)
+I (C:\StellarisWare\driverlib\pin_map.h)(0x00000000)
+I (C:\StellarisWare\driverlib\pwm.h)(0x00000000)
+I (C:\StellarisWare\driverlib\sysctl.h)(0x00000000)
+F (.\PWMLEDDriver.h)(0x52CF447C)()
+F (C:\StellarisWare\utils\ustdlib.c)(0x00000000)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\ek-lm3s1968 -I. -IC:\StellarisWare\utils-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM3S1968 -o .\ustdlib.o --omf_browse .\ustdlib.crf --depend .\ustdlib.d)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x4EB126E6)
+I (C:\StellarisWare\driverlib\debug.h)(0x00000000)
+I (C:\StellarisWare\utils\ustdlib.h)(0x00000000)
+I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x4EB126DC)
