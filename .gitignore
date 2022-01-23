@@ -1,6 +1,5 @@
 *.php
 *.html
-*.txt
 *.htm
 *.aspx
 *.asp
@@ -8,7 +7,6 @@
 *.css
 *.pgsql.txt
 *.mysql.txt
-*.pdf
 *.cgi
 *.inc
 *.gif
