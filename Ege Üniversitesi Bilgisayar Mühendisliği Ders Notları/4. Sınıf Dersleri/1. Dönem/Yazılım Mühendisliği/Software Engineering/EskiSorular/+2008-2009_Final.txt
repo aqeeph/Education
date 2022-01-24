@@ -1,9 +1,0 @@
-18 puanlýk test
-1.a- maintenance cost factors(6)
-   b- test case designs (sadece adlarý)(6)
-2. maintenance türleri ve proje ile ilgili örnekleri(12)
-3. lehman law's ilk 2 kuralýný vermiþ kýsaca acýkla(
-4. non-functional req acýkla ve türlerini acýkla(12)
-5. data process, event process, transaction process, language process adlarýný vermiþ acýkla ve altta örnek 2 sistem var bunlarýn hangisine girer, neden?(20)
-6. projedeki "makale gönderme" use caseinin main succes senario'su ve ssd çizimi(15 puan)
-ben bunlarý hatýrladým, belki 3-5 puanlýk küçük bir sooru daha olabilir...

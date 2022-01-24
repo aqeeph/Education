@@ -1,9 +1,0 @@
-- ilk baþta 3 - 4 tane test sorusu vardý. none of above, all of above gibi þýklarý vardý !
-- Bir Yazýlým projesinin özelliklerinden bir kça tane yazýnýz diyordu
-- Online eðitim ile ilgili olarak ViewPOint diagramý çizmemizi bekliyordu  (Interactor - Indirect ve Domain olan
-          dallarýyla birlikte ayrýltýlý)
-- 3 - 4 tane daha yazýlý cevap istediði soru vardý ama mantýk sorusu deðildi direk bilgiyi sormuþ, þunun
-          etmenlerinde 3 ünü yazýnýz gibi (Sanýrým birinde Non-functional req lerin çþitlerini örnek vererek yazýnýz
-          diyordu)
-- 5-6 tanede requirement yazmýþ ve bunlarýn hatalarýný düzeltiniz diyordu, her yazýlan req. ,n ne hatasý olduðunu
-          belirtin ve düzgün halini yazýnýz þekjlindeydi

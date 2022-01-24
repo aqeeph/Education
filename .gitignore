@@ -1,3 +1,4 @@
+*.bak
 *.aspx
 *.asp
 *.js
@@ -7,12 +8,9 @@
 *.cfm
 *.wmv
 *.axd
-*.gz
 *.jsp
-*.ico
 *.exe
 *.csi
-*.inc.php
 *.config
 *.ashx
 *.log
@@ -24,10 +22,8 @@
 *.asa
 *.flv
 *.php3
-*.bak
 *.asmx
 *.page
-*.phtml
 *.dll
 *.asax
 *.1
@@ -40,9 +36,6 @@
 *.nsf
 *.Gif
 *.sql
-*.Jpeg
-*.Jpg
-*.xml.gz
 *.new
 *.avi
 *.psd
@@ -54,11 +47,9 @@
 *.dat
 *.do
 *.xsl
-*.class
 *.mdb
 *.include
 *.12
-*.cs
 *.class.php
 *.htc
 *.mov
@@ -77,10 +68,8 @@
 *.1.0
 *.files
 *.master
-*.jar
 *.vb
 *.mp4
-*.local.php
 *.fla
 *.require
 *.de
@@ -101,9 +90,7 @@
 *.net
 *.ttf
 *.X-AOM
-*.jhtml
 *.mpeg
-*.ASP
 *.LOG
 *.X-FANCYCAT
 *.php4
@@ -128,7 +115,6 @@
 *.X-SURVEY
 *.tif
 *.dir
-*.json
 *.6.9
 *.Zif
 *.wma
@@ -136,13 +122,10 @@
 *.mid
 *.rm
 *.aspx.vb
-*.tar.gz
 *.woa
 *.main
 *.ram
 *.opml
-*.0.html
-*.css.php
 *.feed
 *.lasso
 *.6.3
@@ -234,7 +217,6 @@
 *.1a
 *.34
 *.5.3
-*.7z
 *.ajax
 *.cfm.cfm
 *.chm
@@ -264,7 +246,6 @@
 *.p
 *.store
 *.webinfo
-*.xml.php
 *.3.2
 *.5.0
 *.1.1
@@ -310,7 +291,6 @@
 *.mysql-select-db
 *.phps
 *.pm
-*.pptx
 *.sav
 *.sendtoafriendform
 *.ssi
@@ -366,9 +346,6 @@
 *.816
 *.970
 *.989
-*.ASPX
-*.JS
-*.PHP
 *.array-keys
 *.atom
 *.award
@@ -381,15 +358,12 @@
 *.fil
 *.geo
 *.h
-*.html.bak
 *.ida
 *.implode
-*.index.php
 *.iso
 *.kmz
 *.mysql-pconnect
 *.php.old
-*.php.txt
 *.rec
 *.storefront
 *.taf
@@ -400,12 +374,10 @@
 *.23
 *.2a
 *.8.1
-*.CSS
 *.NSF
 *.Sponsors
 *.a
 *.aquery
-*.ascx.cs
 *.cat
 *.contrib
 *.ds
@@ -418,7 +390,6 @@
 *.hotelName
 *.in-array
 *.index
-*.ini.php
 *.layer
 *.maninfo
 *.odt
@@ -505,7 +476,6 @@
 *.save
 *.search.php
 *.t
-*.wsdl
 *.0-to1.2.php
 *.0.3
 *.03
