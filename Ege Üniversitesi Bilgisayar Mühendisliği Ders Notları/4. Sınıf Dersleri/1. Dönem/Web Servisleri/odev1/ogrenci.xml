@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ogrenci xmlns:xsi="http://www.w3.org/
+   2001/XMLSchema-instance">
+	<No>201034</No>
+	<Ad>Ali</Ad>
+	<Soyad>Temiz</Soyad>
+	<Dersler>
+	    <Ders>
+	        <Kod>111</Kod>
+	        <Ad>Matematik</Ad>
+	        <Not>80</Not>
+	    </Ders>
+	    <Ders>
+	        <Kod>112</Kod>
+	        <Ad>Fizik</Ad>
+	        <Not>70</Not>
+	    </Ders>
+	</Dersler>
+</Ogrenci>

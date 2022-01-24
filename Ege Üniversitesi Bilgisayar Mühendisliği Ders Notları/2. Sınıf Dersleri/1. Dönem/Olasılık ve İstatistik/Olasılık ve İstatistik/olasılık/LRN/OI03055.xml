@@ -1,0 +1,153 @@
+<quiz title="Değerlendirme Soruları">
+	<soru>
+		<sorumetni>Bir madeni para ard arda 5 kez atılmaktadır. Elde edilebilecek mümkün denemelerin sayısı aşağıdakilerden hangisidir?</sorumetni>
+		<secenekler type="radio">
+			<secenek dogru="true">32</secenek>
+			<secenek>5</secenek>
+			<secenek>2</secenek>
+			<secenek>10</secenek>
+			<secenek>25</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>Bir süpermarketin değişik reyonlarına 5 tür mal gönderilmiştir. 2 kişiden oluşan ekip malları reyonlara kaç farklı şekilde yerleştirebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>10</secenek>
+			<secenek dogru="true">32</secenek>
+			<secenek>25</secenek>
+			<secenek>16</secenek>
+			<secenek>2</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>Bir üniversitede satranç turnuvası düzenleniyor. Turnuvaya 12 yarışmacı katılıyor. Birincilik, ikincilik ve üçüncülük dereceleri kaç farklı şekilde verilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>1500</secenek>
+			<secenek>1800</secenek>
+			<secenek>1650</secenek>
+			<secenek dogru="true">1320</secenek>
+			<secenek>2490</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>9 farklı renkten oluşan kalem kutusundan her kalem bir kez kullanılmak suretiyle 3 kalemin sığabileceği küçük kalem kutusuna kaç farklı şekilde yerleştirilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>250</secenek>
+			<secenek>359</secenek>
+			<secenek>123</secenek>
+			<secenek>498</secenek>
+			<secenek dogru="true">504</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>10 farklı renkten oluşan tişörtlerini 3 bavula yerleştirmek isteyen bir bayan, birinci bavula 2, ikinci bavula 3 ve üçüncü bavula 5 tişörtü kaç farklı şekilde yerleştirebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>3200</secenek>
+			<secenek dogru="true">2520</secenek>
+			<secenek>3900</secenek>
+			<secenek>1200</secenek>
+			<secenek>3300</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>5 kişi bir bankanın fatura gişesi önünde kaç farklı şekilde sıralanabilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>5</secenek>
+			<secenek>1</secenek>
+			<secenek dogru="true">120</secenek>
+			<secenek>10</secenek>
+			<secenek>15</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>'Tuana' kelimesinin harfleri ile kaç farklı sözcük elde edilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek dogru="true">60</secenek>
+			<secenek>5</secenek>
+			<secenek>20</secenek>
+			<secenek>15</secenek>
+			<secenek>1</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>6 değişik zarf arasından 3 tanesi kaç farklı şekilde seçilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>10</secenek>
+			<secenek>6</secenek>
+			<secenek dogru="true">20</secenek>
+			<secenek>18</secenek>
+			<secenek>3</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>Bir bilet satış gişesi önünde sıraya giren 4 kişi gişe önünde kaç farklı şekilde sıralanabilirler?</sorumetni>
+		<secenekler type="radio">
+			<secenek>4</secenek>
+			<secenek>16</secenek>
+			<secenek>1</secenek>
+			<secenek dogru="true">24</secenek>
+			<secenek>8</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>Bir radyo programcısı, 8 farklı şarkıdan 4'ünü kaç farklı şekilde sıralayarak sunabilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>1200</secenek>
+			<secenek dogru="true">1680</secenek>
+			<secenek>1500</secenek>
+			<secenek>1800</secenek>
+			<secenek>2000</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>1, 2, 3, 4, 5, 6 rakamlarıyla 5 basamaklı ve rakamlar bir kez kullanılmak şartıyla kaç sayı yazılabilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>250</secenek>
+			<secenek>500</secenek>
+			<secenek dogru="true">720</secenek>
+			<secenek>1200</secenek>
+			<secenek>6</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>10 farklı kartın bulunduğu bir kitap kutusundan 5 kitap kaç farklı şekilde seçilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>5</secenek>
+			<secenek>120</secenek>
+			<secenek>500</secenek>
+			<secenek dogru="true">252</secenek>
+			<secenek>10</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>Aynı renkte olan boncukların aynı büyüklükte olduğu 3 kırmızı, 2 beyaz ve 8 siyah boncuktan oluşan bir kolye yapılacaktır. 13 boncuk kaç faklı şekilde kolyeye dizilebilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek dogru="true">12870</secenek>
+			<secenek>11000</secenek>
+			<secenek>14999</secenek>
+			<secenek>15200</secenek>
+			<secenek>16000</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>15 kişilik bir gruptan bir basketbol takımı (6 kişilik) kaç farklı şekilde oluşturulur?</sorumetni>
+		<secenekler type="radio">
+			<secenek>2300</secenek>
+			<secenek>3800</secenek>
+			<secenek dogru="true">5005</secenek>
+			<secenek>6</secenek>
+			<secenek>15</secenek>
+		</secenekler>
+	</soru>
+	<soru>
+		<sorumetni>OLASILIK kelimesinden kaç farklı sözcük yaratılabilir?</sorumetni>
+		<secenekler type="radio">
+			<secenek>15000</secenek>
+			<secenek>11000</secenek>
+			<secenek>14500</secenek>
+			<secenek dogru="true">10080</secenek>
+			<secenek>18000</secenek>
+		</secenekler>
+	</soru>
+
+</quiz>

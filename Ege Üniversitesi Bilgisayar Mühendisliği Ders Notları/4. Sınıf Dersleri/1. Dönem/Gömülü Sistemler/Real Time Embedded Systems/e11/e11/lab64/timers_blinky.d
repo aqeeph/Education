@@ -1,0 +1,12 @@
+timers_blinky.o: ..\lab63\timers_blinky.c
+timers_blinky.o: C:\StellarisWare\inc/hw_ints.h
+timers_blinky.o: C:\StellarisWare\inc/hw_memmap.h
+timers_blinky.o: C:\StellarisWare\inc/hw_types.h
+timers_blinky.o: C:\StellarisWare\driverlib/debug.h
+timers_blinky.o: C:\StellarisWare\driverlib/gpio.h
+timers_blinky.o: C:\StellarisWare\driverlib/pin_map.h
+timers_blinky.o: C:\StellarisWare\driverlib/interrupt.h
+timers_blinky.o: C:\StellarisWare\driverlib/sysctl.h
+timers_blinky.o: C:\StellarisWare\driverlib/timer.h
+timers_blinky.o: C:\StellarisWare\boards\ek-lm3s1968\drivers/rit128x96x4.h
+timers_blinky.o: C:\StellarisWare\inc/lm3s1968.h
