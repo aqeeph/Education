@@ -1,0 +1,123 @@
+C51 COMPILER V9.53.0.0   MAIN                                                              05/25/2015 09:59:28 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void delay(char); //method tanimi
+   4          
+   5          //-----------------------------------------------
+   6          
+   7          sbit openDoor = P1^0; //kapi acma sinyali
+   8          sbit isLuck   = P1^1; //kapi kilit tusuna basilip basilmadigini anliyoruz
+   9          sbit stayOpen = P1^2; //sürekli acik kalsin tusuna basildigini anliyoruz
+  10          
+  11          sbit isInit   = P1^3; //timer'larin calismamasini anliyruz
+  12          sbit tempBit = P1^7; //gecici olarak bit saklamak icin
+  13          
+  14          sbit INIT0 = P3^2; //interrupt tetiklemek icin
+  15          sbit INIT1 = P3^3;
+  16          
+  17          unsigned char i;
+  18          
+  19          //kapiyi kilitleme sinyali ve kapi aclma sinyali
+  20          void external0(void) interrupt 0
+  21          {
+  22   1        if(isInit){ //pakiyi kilitler
+  23   2          openDoor  = 0; //kapi acma sinyali
+  24   2          isLuck    = 1;
+  25   2          stayOpen  = 0;
+  26   2        }
+  27   1        else //kapiyi sistemin durumuna bakmaksizin acar
+  28   1        {
+  29   2          tempBit = openDoor;
+  30   2          openDoor = 1;
+  31   2          delay(15);
+  32   2          openDoor = tempBit;
+  33   2        }
+  34   1      }
+  35          
+  36          //kapiyi askida tutmak için ve otomatik kapi icin
+  37          void external1(void) interrupt 2
+  38          {
+  39   1        if(isInit){ //kapiyi askida tutar
+  40   2          openDoor  = 1;
+  41   2          isLuck    = 0;
+  42   2          stayOpen  = 1;
+  43   2        }
+  44   1        else
+  45   1        {
+  46   2          if(isLuck)
+  47   2            return; //kapi kilitli
+  48   2          else if(stayOpen)
+  49   2          {
+  50   3            stayOpen = 0;
+  51   3            return;
+  52   3          }
+  53   2          openDoor  = 1;
+  54   2          delay(15);
+  55   2          openDoor  = 0;
+C51 COMPILER V9.53.0.0   MAIN                                                              05/25/2015 09:59:28 PAGE 2   
+
+  56   2        }
+  57   1      }
+  58          
+  59          void delay(unsigned char limit)
+  60          {
+  61   1        while(limit>0){
+  62   2          limit--;  
+  63   2          i=0;
+  64   2          while(i<220){
+  65   3            i++;
+  66   3      
+  67   3            TH1=0xC3;
+  68   3            TL1=0x50; 
+  69   3            TF1 = 0;
+  70   3            TR1 = 1;
+  71   3            
+  72   3            while(TF1!=1) {}
+  73   3          }
+  74   2        }
+  75   1      }
+  76          
+  77          void main(void)
+  78          {
+  79   1        openDoor  = 0; //program baslarken kapi kilitlemek icin
+  80   1        isLuck    = 1;
+  81   1        stayOpen  = 0;
+  82   1        
+  83   1        TMOD=0x11; //timer1 ve timer0 icin moodlari belirledik
+  84   1        
+  85   1        IE = 0x80; //interrupt'lar almayi aktiflestirdim.
+  86   1        EX0 = 1; //external interrupt 0'i aktif ediyor
+  87   1        EX1 = 1; //external interrupt 1'i aktif ediyor
+  88   1        
+  89   1        isInit = 0;
+  90   1        INIT0 = 0; 
+  91   1      
+  92   1        //external0();
+  93   1        
+  94   1        while(1) {} //programin sonlanmamasi icin
+  95   1      
+  96   1      }
+  97          
+  98          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    227    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

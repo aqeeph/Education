@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct sayi{
+    int i;
+};
+
+typedef struct sayi Sayi;
+
+void deneme(Sayi *bir_sayi)
+{
+    (*bir_sayi).i++;
+    bir_sayi->i++;
+    printf("%d\n", (*bir_sayi).i);
+}
+
+int main()
+{
+
+    float a=2.32333;
+    printf("%lf",a);
+    system("pause");
+
+
+    Sayi bir_sayi={4};
+    deneme(&bir_sayi);
+    printf("%d\n",(&bir_sayi)->i);
+
+    char str[]= "Hello";
+    printf("%s",str);
+
+    return 0;
+}

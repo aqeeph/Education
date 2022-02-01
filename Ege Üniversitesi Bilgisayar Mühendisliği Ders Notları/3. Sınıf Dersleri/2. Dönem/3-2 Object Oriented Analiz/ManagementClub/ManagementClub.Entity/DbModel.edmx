@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ManagementClub.Entity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClubEventAttendances">
+          <Key>
+            <PropertyRef Name="ClubEventAttendanceId" />
+          </Key>
+          <Property Name="ClubEventAttendanceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClubEventId" Type="int" />
+          <Property Name="StudentNo" Type="varchar" MaxLength="32" />
+          <Property Name="IsAttend" Type="bit" />
+        </EntityType>
+        <EntityType Name="ClubEvents">
+          <Key>
+            <PropertyRef Name="ClubEventId" />
+          </Key>
+          <Property Name="ClubEventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClubId" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Place" Type="varchar" MaxLength="128" />
+          <Property Name="Explanation" Type="varchar" MaxLength="256" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="ClubManagers">
+          <Key>
+            <PropertyRef Name="ClubManagerId" />
+          </Key>
+          <Property Name="ClubManagerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentNo" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="ClubId" Type="int" Nullable="false" />
+          <Property Name="ManagerType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ClubMembers">
+          <Key>
+            <PropertyRef Name="ClubMemberId" />
+          </Key>
+          <Property Name="ClubMemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentNo" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="ClubId" Type="int" Nullable="false" />
+          <Property Name="ClubMemberName" Type="varchar" MaxLength="32" />
+          <Property Name="Password" Type="varchar" MaxLength="32" />
+          <Property Name="Email" Type="varchar" MaxLength="64" />
+          <Property Name="Phone" Type="varchar" MaxLength="16" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clubs">
+          <Key>
+            <PropertyRef Name="ClubId" />
+          </Key>
+          <Property Name="ClubId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClubName" Type="varchar" MaxLength="64" />
+          <Property Name="Explanation" Type="varchar" MaxLength="256" />
+          <Property Name="UniversityId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="NotificationRecievers">
+          <Key>
+            <PropertyRef Name="NotifationRecieverId" />
+          </Key>
+          <Property Name="NotifationRecieverId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NotificationId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Notifications">
+          <Key>
+            <PropertyRef Name="NotificationId" />
+          </Key>
+          <Property Name="NotificationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="StudentNo" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Subject" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Body" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="StudentName" Type="varchar" MaxLength="64" />
+          <Property Name="UniversityId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Universities">
+          <Key>
+            <PropertyRef Name="UniversityId" />
+          </Key>
+          <Property Name="UniversityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UniversityName" Type="varchar" MaxLength="128" />
+        </EntityType>
+        <Association Name="FK_ClubManagers_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="ClubManagers" Type="Self.ClubManagers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="ClubManagers">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubMembers_Clubs">
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="1" />
+          <End Role="ClubMembers" Type="Self.ClubMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubMembers">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubMembers_Students1">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="ClubMembers" Type="Self.ClubMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="ClubMembers">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClupEventAttendances_ClupEvents">
+          <End Role="ClubEvents" Type="Self.ClubEvents" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ClubEventAttendances" Type="Self.ClubEventAttendances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubEvents">
+              <PropertyRef Name="ClubEventId" />
+            </Principal>
+            <Dependent Role="ClubEventAttendances">
+              <PropertyRef Name="ClubEventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClupEvents_Clups">
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="0..1" />
+          <End Role="ClubEvents" Type="Self.ClubEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubEvents">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClupManagers_Clups">
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ClubManagers" Type="Self.ClubManagers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubManagers">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clups_Universities">
+          <End Role="Universities" Type="Self.Universities" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Universities">
+              <PropertyRef Name="UniversityId" />
+            </Principal>
+            <Dependent Role="Clubs">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NotificationRecievers_Notifications">
+          <End Role="Notifications" Type="Self.Notifications" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NotificationRecievers" Type="Self.NotificationRecievers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Notifications">
+              <PropertyRef Name="NotificationId" />
+            </Principal>
+            <Dependent Role="NotificationRecievers">
+              <PropertyRef Name="NotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notifications_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="Notifications">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Universities">
+          <End Role="Universities" Type="Self.Universities" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Universities">
+              <PropertyRef Name="UniversityId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ManagementClubEntityStoreContainer">
+          <EntitySet Name="ClubEventAttendances" EntityType="Self.ClubEventAttendances" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClubEvents" EntityType="Self.ClubEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClubManagers" EntityType="Self.ClubManagers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClubMembers" EntityType="Self.ClubMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clubs" EntityType="Self.Clubs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationRecievers" EntityType="Self.NotificationRecievers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Universities" EntityType="Self.Universities" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClubManagers_Students" Association="Self.FK_ClubManagers_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="ClubManagers" EntitySet="ClubManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubMembers_Clubs" Association="Self.FK_ClubMembers_Clubs">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="ClubMembers" EntitySet="ClubMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubMembers_Students1" Association="Self.FK_ClubMembers_Students1">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="ClubMembers" EntitySet="ClubMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClupEventAttendances_ClupEvents" Association="Self.FK_ClupEventAttendances_ClupEvents">
+            <End Role="ClubEvents" EntitySet="ClubEvents" />
+            <End Role="ClubEventAttendances" EntitySet="ClubEventAttendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClupEvents_Clups" Association="Self.FK_ClupEvents_Clups">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="ClubEvents" EntitySet="ClubEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClupManagers_Clups" Association="Self.FK_ClupManagers_Clups">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="ClubManagers" EntitySet="ClubManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clups_Universities" Association="Self.FK_Clups_Universities">
+            <End Role="Universities" EntitySet="Universities" />
+            <End Role="Clubs" EntitySet="Clubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NotificationRecievers_Notifications" Association="Self.FK_NotificationRecievers_Notifications">
+            <End Role="Notifications" EntitySet="Notifications" />
+            <End Role="NotificationRecievers" EntitySet="NotificationRecievers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notifications_Students" Association="Self.FK_Notifications_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Notifications" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Universities" Association="Self.FK_Students_Universities">
+            <End Role="Universities" EntitySet="Universities" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ManagementClub.Entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ClubDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClubEventAttendances" EntityType="ManagementClub.Entity.ClubEventAttendance" />
+          <EntitySet Name="ClubEvents" EntityType="ManagementClub.Entity.ClubEvent" />
+          <EntitySet Name="ClubManagers" EntityType="ManagementClub.Entity.ClubManager" />
+          <EntitySet Name="ClubMembers" EntityType="ManagementClub.Entity.ClubMember" />
+          <EntitySet Name="Clubs" EntityType="ManagementClub.Entity.Club" />
+          <EntitySet Name="NotificationRecievers" EntityType="ManagementClub.Entity.NotificationReciever" />
+          <EntitySet Name="Notifications" EntityType="ManagementClub.Entity.Notification" />
+          <EntitySet Name="Students" EntityType="ManagementClub.Entity.Student" />
+          <EntitySet Name="Universities" EntityType="ManagementClub.Entity.University" />
+          <AssociationSet Name="FK_ClupEventAttendances_ClupEvents" Association="ManagementClub.Entity.FK_ClupEventAttendances_ClupEvents">
+            <End Role="ClubEvent" EntitySet="ClubEvents" />
+            <End Role="ClubEventAttendance" EntitySet="ClubEventAttendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClupEvents_Clups" Association="ManagementClub.Entity.FK_ClupEvents_Clups">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="ClubEvent" EntitySet="ClubEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubManagers_Students" Association="ManagementClub.Entity.FK_ClubManagers_Students">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="ClubManager" EntitySet="ClubManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClupManagers_Clups" Association="ManagementClub.Entity.FK_ClupManagers_Clups">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="ClubManager" EntitySet="ClubManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubMembers_Clubs" Association="ManagementClub.Entity.FK_ClubMembers_Clubs">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="ClubMember" EntitySet="ClubMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubMembers_Students1" Association="ManagementClub.Entity.FK_ClubMembers_Students1">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="ClubMember" EntitySet="ClubMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clups_Universities" Association="ManagementClub.Entity.FK_Clups_Universities">
+            <End Role="University" EntitySet="Universities" />
+            <End Role="Club" EntitySet="Clubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NotificationRecievers_Notifications" Association="ManagementClub.Entity.FK_NotificationRecievers_Notifications">
+            <End Role="Notification" EntitySet="Notifications" />
+            <End Role="NotificationReciever" EntitySet="NotificationRecievers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notifications_Students" Association="ManagementClub.Entity.FK_Notifications_Students">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Notification" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Universities" Association="ManagementClub.Entity.FK_Students_Universities">
+            <End Role="University" EntitySet="Universities" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ClubEventAttendance">
+          <Key>
+            <PropertyRef Name="ClubEventAttendanceId" />
+          </Key>
+          <Property Name="ClubEventAttendanceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClubEventId" Type="Int32" />
+          <Property Name="StudentNo" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="IsAttend" Type="Boolean" />
+          <NavigationProperty Name="ClubEvent" Relationship="ManagementClub.Entity.FK_ClupEventAttendances_ClupEvents" FromRole="ClubEventAttendance" ToRole="ClubEvent" />
+        </EntityType>
+        <EntityType Name="ClubEvent">
+          <Key>
+            <PropertyRef Name="ClubEventId" />
+          </Key>
+          <Property Name="ClubEventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClubId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Place" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Explanation" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="ClubEventAttendances" Relationship="ManagementClub.Entity.FK_ClupEventAttendances_ClupEvents" FromRole="ClubEvent" ToRole="ClubEventAttendance" />
+          <NavigationProperty Name="Club" Relationship="ManagementClub.Entity.FK_ClupEvents_Clups" FromRole="ClubEvent" ToRole="Club" />
+        </EntityType>
+        <EntityType Name="ClubManager">
+          <Key>
+            <PropertyRef Name="ClubManagerId" />
+          </Key>
+          <Property Name="ClubManagerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ClubId" Type="Int32" Nullable="false" />
+          <Property Name="ManagerType" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Student" Relationship="ManagementClub.Entity.FK_ClubManagers_Students" FromRole="ClubManager" ToRole="Student" />
+          <NavigationProperty Name="Club" Relationship="ManagementClub.Entity.FK_ClupManagers_Clups" FromRole="ClubManager" ToRole="Club" />
+        </EntityType>
+        <EntityType Name="ClubMember">
+          <Key>
+            <PropertyRef Name="ClubMemberId" />
+          </Key>
+          <Property Name="ClubMemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ClubId" Type="Int32" Nullable="false" />
+          <Property Name="ClubMemberName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Club" Relationship="ManagementClub.Entity.FK_ClubMembers_Clubs" FromRole="ClubMember" ToRole="Club" />
+          <NavigationProperty Name="Student" Relationship="ManagementClub.Entity.FK_ClubMembers_Students1" FromRole="ClubMember" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Club">
+          <Key>
+            <PropertyRef Name="ClubId" />
+          </Key>
+          <Property Name="ClubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClubName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="Explanation" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="UniversityId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="ClubEvents" Relationship="ManagementClub.Entity.FK_ClupEvents_Clups" FromRole="Club" ToRole="ClubEvent" />
+          <NavigationProperty Name="ClubManagers" Relationship="ManagementClub.Entity.FK_ClupManagers_Clups" FromRole="Club" ToRole="ClubManager" />
+          <NavigationProperty Name="ClubMembers" Relationship="ManagementClub.Entity.FK_ClubMembers_Clubs" FromRole="Club" ToRole="ClubMember" />
+          <NavigationProperty Name="University" Relationship="ManagementClub.Entity.FK_Clups_Universities" FromRole="Club" ToRole="University" />
+        </EntityType>
+        <EntityType Name="NotificationReciever">
+          <Key>
+            <PropertyRef Name="NotifationRecieverId" />
+          </Key>
+          <Property Name="NotifationRecieverId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NotificationId" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Notification" Relationship="ManagementClub.Entity.FK_NotificationRecievers_Notifications" FromRole="NotificationReciever" ToRole="Notification" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="NotificationId" />
+          </Key>
+          <Property Name="NotificationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NotificationRecievers" Relationship="ManagementClub.Entity.FK_NotificationRecievers_Notifications" FromRole="Notification" ToRole="NotificationReciever" />
+          <NavigationProperty Name="Student" Relationship="ManagementClub.Entity.FK_Notifications_Students" FromRole="Notification" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="StudentName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="UniversityId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="ClubManagers" Relationship="ManagementClub.Entity.FK_ClubManagers_Students" FromRole="Student" ToRole="ClubManager" />
+          <NavigationProperty Name="ClubMembers" Relationship="ManagementClub.Entity.FK_ClubMembers_Students1" FromRole="Student" ToRole="ClubMember" />
+          <NavigationProperty Name="Notifications" Relationship="ManagementClub.Entity.FK_Notifications_Students" FromRole="Student" ToRole="Notification" />
+          <NavigationProperty Name="University" Relationship="ManagementClub.Entity.FK_Students_Universities" FromRole="Student" ToRole="University" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="UniversityId" />
+          </Key>
+          <Property Name="UniversityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UniversityName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Clubs" Relationship="ManagementClub.Entity.FK_Clups_Universities" FromRole="University" ToRole="Club" />
+          <NavigationProperty Name="Students" Relationship="ManagementClub.Entity.FK_Students_Universities" FromRole="University" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_ClupEventAttendances_ClupEvents">
+          <End Type="ManagementClub.Entity.ClubEvent" Role="ClubEvent" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagementClub.Entity.ClubEventAttendance" Role="ClubEventAttendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubEvent">
+              <PropertyRef Name="ClubEventId" />
+            </Principal>
+            <Dependent Role="ClubEventAttendance">
+              <PropertyRef Name="ClubEventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClupEvents_Clups">
+          <End Type="ManagementClub.Entity.Club" Role="Club" Multiplicity="0..1" />
+          <End Type="ManagementClub.Entity.ClubEvent" Role="ClubEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubEvent">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubManagers_Students">
+          <End Type="ManagementClub.Entity.Student" Role="Student" Multiplicity="1" />
+          <End Type="ManagementClub.Entity.ClubManager" Role="ClubManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="ClubManager">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClupManagers_Clups">
+          <End Type="ManagementClub.Entity.Club" Role="Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagementClub.Entity.ClubManager" Role="ClubManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubManager">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubMembers_Clubs">
+          <End Type="ManagementClub.Entity.Club" Role="Club" Multiplicity="1" />
+          <End Type="ManagementClub.Entity.ClubMember" Role="ClubMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubId" />
+            </Principal>
+            <Dependent Role="ClubMember">
+              <PropertyRef Name="ClubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubMembers_Students1">
+          <End Type="ManagementClub.Entity.Student" Role="Student" Multiplicity="1" />
+          <End Type="ManagementClub.Entity.ClubMember" Role="ClubMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="ClubMember">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clups_Universities">
+          <End Type="ManagementClub.Entity.University" Role="University" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagementClub.Entity.Club" Role="Club" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="UniversityId" />
+            </Principal>
+            <Dependent Role="Club">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NotificationRecievers_Notifications">
+          <End Type="ManagementClub.Entity.Notification" Role="Notification" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagementClub.Entity.NotificationReciever" Role="NotificationReciever" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Notification">
+              <PropertyRef Name="NotificationId" />
+            </Principal>
+            <Dependent Role="NotificationReciever">
+              <PropertyRef Name="NotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notifications_Students">
+          <End Type="ManagementClub.Entity.Student" Role="Student" Multiplicity="1" />
+          <End Type="ManagementClub.Entity.Notification" Role="Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Universities">
+          <End Type="ManagementClub.Entity.University" Role="University" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagementClub.Entity.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="UniversityId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ManagementClubEntityStoreContainer" CdmEntityContainer="ClubDbEntities">
+          <EntitySetMapping Name="ClubEventAttendances">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.ClubEventAttendance">
+              <MappingFragment StoreEntitySet="ClubEventAttendances">
+                <ScalarProperty Name="IsAttend" ColumnName="IsAttend" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="ClubEventId" ColumnName="ClubEventId" />
+                <ScalarProperty Name="ClubEventAttendanceId" ColumnName="ClubEventAttendanceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClubEvents">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.ClubEvent">
+              <MappingFragment StoreEntitySet="ClubEvents">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+                <ScalarProperty Name="ClubEventId" ColumnName="ClubEventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClubManagers">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.ClubManager">
+              <MappingFragment StoreEntitySet="ClubManagers">
+                <ScalarProperty Name="ManagerType" ColumnName="ManagerType" />
+                <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="ClubManagerId" ColumnName="ClubManagerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClubMembers">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.ClubMember">
+              <MappingFragment StoreEntitySet="ClubMembers">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ClubMemberName" ColumnName="ClubMemberName" />
+                <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="ClubMemberId" ColumnName="ClubMemberId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clubs">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.Club">
+              <MappingFragment StoreEntitySet="Clubs">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+                <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+                <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+                <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationRecievers">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.NotificationReciever">
+              <MappingFragment StoreEntitySet="NotificationRecievers">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+                <ScalarProperty Name="NotifationRecieverId" ColumnName="NotifationRecieverId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notifications">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.Notification">
+              <MappingFragment StoreEntitySet="Notifications">
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Universities">
+            <EntityTypeMapping TypeName="ManagementClub.Entity.University">
+              <MappingFragment StoreEntitySet="Universities">
+                <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+                <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

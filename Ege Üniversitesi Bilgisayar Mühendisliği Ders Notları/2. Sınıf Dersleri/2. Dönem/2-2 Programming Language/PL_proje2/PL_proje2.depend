@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1402047909 source:d:\certificates\denemeler\pl_proje2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1402338840 source:c:\users\admin\desktop\pl_proje2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="../template/template.xhtml" >
+            <ui:define name="title">User List</ui:define>
+
+            <ui:define name="content">
+                <div class="container">
+                     <div class="row">
+                    <div class="col-lg-12 h1 text-center well text-primary">
+                       User List Page
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-push-10 col-lg-2 text-center">
+                        <h:link value="Add New User" outcome="addNewStudent" />
+                    </div>
+                </div>
+                    
+                    
+                    <div class="col-lg-12">
+                          <h:form>
+                    <h:dataTable value="#{user.userList}" var="user" styleClass="table table-bordered">
+                        <h:column>
+                            <f:facet name="header">User Name</f:facet>
+                            <h:outputText value="#{user.userName}" rendered="#{!user.editable}" />
+                            <h:inputText value="#{user.userName}" rendered="#{user.editable}" />
+
+                        </h:column>
+                        <h:column>    				
+                            <f:facet name="header">Password</f:facet>    
+                            <h:outputText value="#{user.password}" rendered="#{!user.editable}" />
+                            <h:inputText value="#{user.password}" rendered="#{user.editable}" />
+
+                        </h:column>
+                        <h:column>    				
+                            <f:facet name="header">Edit</f:facet>    				
+                            <h:commandButton value="Edit" action="#{user.changeVisible(user)}" rendered="#{!user.editable}" />
+                            <h:commandButton value="Update" action="#{user.updateUser(user)}" rendered="#{user.editable}" />
+                        </h:column>
+                    </h:dataTable>
+                    
+                    <h:outputText value="#{user.message}"/>
+                </h:form>
+                    </div>
+                    
+                    
+                    
+                </div>
+
+              
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

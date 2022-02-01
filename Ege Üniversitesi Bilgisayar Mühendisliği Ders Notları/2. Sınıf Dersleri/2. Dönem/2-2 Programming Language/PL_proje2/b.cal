@@ -1,0 +1,2 @@
+SAYI:=5 * 7;
+output “ iste burada:” sayi;

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="../template/template.xhtml" >
+            <ui:define name="title">Add New Student</ui:define>
+            <ui:define name="content">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-push-3 col-lg-6">
+                            <div class=" text-primary h1">
+                                Add New Student
+                            </div>
+                            <h:form>
+                                <div class="form-group">
+                                    <label for="groupID">GroupID :</label>
+                                    <h:inputText class="form-control" id="groupID" value="#{student.groupID}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="to">Student Number :</label>
+                                    <h:inputText class="form-control" id="studentNumber" value="#{student.studentNumber}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="to">Name :</label>
+                                    <h:inputText class="form-control" id="name" value="#{student.name}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Last Name :</label>
+                                    <h:inputText class="form-control" id="subject" value="#{student.lastName}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="gorupMail">Group Mail :</label>
+                                    <h:inputText class="form-control" id="groupMail" value="#{student.groupMail}"/>
+                                </div>
+                                <h:commandButton type="submit" class="btn btn-block btn-success" value="Add New Student" action="#{student.addNewStudent()}"/>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,5 @@
+A:=-2; Bee:=5;
+C:=bee/A;
+Output BEE 
+“ divided by ” a 
+“ gives:” C;

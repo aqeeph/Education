@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManagementClubEntityStoreContainer" CdmEntityContainer="ClubDbEntities">
+    <EntitySetMapping Name="ClubEventAttendances">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.ClubEventAttendance">
+        <MappingFragment StoreEntitySet="ClubEventAttendances">
+          <ScalarProperty Name="IsAttend" ColumnName="IsAttend" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+          <ScalarProperty Name="ClubEventId" ColumnName="ClubEventId" />
+          <ScalarProperty Name="ClubEventAttendanceId" ColumnName="ClubEventAttendanceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClubEvents">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.ClubEvent">
+        <MappingFragment StoreEntitySet="ClubEvents">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+          <ScalarProperty Name="ClubEventId" ColumnName="ClubEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClubManagers">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.ClubManager">
+        <MappingFragment StoreEntitySet="ClubManagers">
+          <ScalarProperty Name="ManagerType" ColumnName="ManagerType" />
+          <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+          <ScalarProperty Name="ClubManagerId" ColumnName="ClubManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClubMembers">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.ClubMember">
+        <MappingFragment StoreEntitySet="ClubMembers">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ClubMemberName" ColumnName="ClubMemberName" />
+          <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+          <ScalarProperty Name="ClubMemberId" ColumnName="ClubMemberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.Club">
+        <MappingFragment StoreEntitySet="Clubs">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+          <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+          <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+          <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationRecievers">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.NotificationReciever">
+        <MappingFragment StoreEntitySet="NotificationRecievers">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+          <ScalarProperty Name="NotifationRecieverId" ColumnName="NotifationRecieverId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universities">
+      <EntityTypeMapping TypeName="ManagementClub.Entity.University">
+        <MappingFragment StoreEntitySet="Universities">
+          <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+          <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

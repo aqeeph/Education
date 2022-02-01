@@ -1,0 +1,168 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/25/2015  09:59:28  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE main.obj TO KapiKilit RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  KapiKilit (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?MAIN
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     000DH                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     07EAH                  *** GAP ***
+            CODE    0800H     0058H     UNIT         ?PR?EXTERNAL1?MAIN
+            CODE    0858H     0052H     UNIT         ?PR?EXTERNAL0?MAIN
+            CODE    08AAH     0023H     UNIT         ?PR?_DELAY?MAIN
+            CODE    08CDH     0016H     UNIT         ?PR?MAIN?MAIN
+            CODE    08E3H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   KapiKilit (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?EXTERNAL0?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+*** NEW ROOT ***************************************************
+
+?PR?EXTERNAL1?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/25/2015  09:59:28  PAGE 2
+
+
+SYMBOL TABLE OF MODULE:  KapiKilit (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:08AAH         PUBLIC        _delay
+  C:0858H         PUBLIC        external0
+  C:0800H         PUBLIC        external1
+  C:08CDH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0090H.0       PUBLIC        openDoor
+  B:0088H.7       PUBLIC        TF1
+  B:00A8H.0       PUBLIC        EX0
+  D:008DH         PUBLIC        TH1
+  B:00A8H.2       PUBLIC        EX1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  B:0090H.2       PUBLIC        stayOpen
+  B:0090H.7       PUBLIC        tempBit
+  B:00B0H.2       PUBLIC        INIT0
+  D:0008H         PUBLIC        i
+  B:0090H.1       PUBLIC        isLuck
+  B:0090H.3       PUBLIC        isInit
+  -------         PROC          EXTERNAL0
+  C:0858H         LINE#         20
+  C:0875H         LINE#         22
+  C:0878H         LINE#         23
+  C:087AH         LINE#         24
+  C:087CH         LINE#         25
+  C:087EH         LINE#         26
+  C:0880H         LINE#         28
+  C:0880H         LINE#         29
+  C:0884H         LINE#         30
+  C:0886H         LINE#         31
+  C:088BH         LINE#         32
+  C:088FH         LINE#         33
+  C:088FH         LINE#         34
+  -------         ENDPROC       EXTERNAL0
+  -------         PROC          EXTERNAL1
+  C:0800H         LINE#         37
+  C:081DH         LINE#         39
+  C:0820H         LINE#         40
+  C:0822H         LINE#         41
+  C:0824H         LINE#         42
+  C:0826H         LINE#         43
+  C:0828H         LINE#         45
+  C:0828H         LINE#         46
+  C:082DH         LINE#         48
+  C:0830H         LINE#         49
+  C:0830H         LINE#         50
+  C:0834H         LINE#         52
+  C:0834H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/25/2015  09:59:28  PAGE 3
+
+
+  C:0836H         LINE#         54
+  C:083BH         LINE#         55
+  C:083DH         LINE#         56
+  C:083DH         LINE#         57
+  -------         ENDPROC       EXTERNAL1
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        limit
+  C:08AAH         LINE#         59
+  C:08AAH         LINE#         60
+  C:08AAH         LINE#         61
+  C:08B0H         LINE#         62
+  C:08B1H         LINE#         63
+  C:08B4H         LINE#         64
+  C:08BBH         LINE#         65
+  C:08BDH         LINE#         67
+  C:08C0H         LINE#         68
+  C:08C3H         LINE#         69
+  C:08C5H         LINE#         70
+  C:08C7H         LINE#         72
+  C:08CCH         LINE#         74
+  C:08CCH         LINE#         75
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:08CDH         LINE#         77
+  C:08CDH         LINE#         78
+  C:08CDH         LINE#         79
+  C:08CFH         LINE#         80
+  C:08D1H         LINE#         81
+  C:08D3H         LINE#         83
+  C:08D6H         LINE#         85
+  C:08D9H         LINE#         86
+  C:08DBH         LINE#         87
+  C:08DDH         LINE#         89
+  C:08DFH         LINE#         90
+  C:08E1H         LINE#         94
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00E9H BYTE (11%) *
+******************************************************************************
+
+Program Size: data=10.0 xdata=0 code=248
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
